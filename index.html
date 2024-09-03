@@ -79,6 +79,58 @@
     flex: 6;
     padding: 20px;
   }
+
+  div.left1 {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    background: #2a2c3f;
+    border-right: solid 1px #3f4455;
+    z-index: 490;
+  }
+  div.left1_contents {
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+    align-items: flex-end;
+  }
+  div.left1_top {
+    margin: 0;
+    padding: 0;
+  }
+  div.left1_bottom {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 25;
+    left: 0;
+  }
+  div.left1_logo {
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+  }
+  div.left1_icon {
+    width: 47px;
+    height: 50px;
+    border-left: solid 3px #2a2c3f;
+    display: block;
+    color: #737376;
+    text-align: center;
+  }
+  div.left1_icon:hover {
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+  div.left1_icon_selected {
+    border-left: solid 3px #007aa6;
+    color: #f1f1f1;
+  }
 </style>
 <body>
   <div class="bottom">
@@ -98,6 +150,25 @@
         <a href="https://forthcoming.systems">more</a>
       </div>
   </div>
+  <div class="left1">
+      <div class="left1_contents">
+        <div class="left1_top">
+          <div class="left1_logo">LOGO</div>
+          <div class="left1_icon">ICON</div>
+          <div class="left1_icon left1_icon_selected">ICON</div>
+          <div class="left1_icon">ICON</div>
+          <div class="left1_icon">ICON</div>
+          <div class="left1_icon">ICON</div>
+          <div class="left1_icon">ICON</div>
+          <div class="left1_icon">ICON</div>
+        </div>
+        <div class="left1_bottom">
+          <div class="left1_icon">ICON</div>
+          <div class="left1_icon">ICON</div>
+          <div class="left1_icon">ICON</div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
