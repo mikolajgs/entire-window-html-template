@@ -131,6 +131,110 @@
     border-left: solid 3px #007aa6;
     color: #f1f1f1;
   }
+
+  div.left2 {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 51;
+    z-index: 400;
+    width: 290px;
+    background: #222336;
+    border-right: solid 1px #3f4455;
+    height: 100%;
+  }
+
+  div.left2 > div {
+    margin: 12px;
+  }
+  div.left2_title {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  div.left2 input[type=text] {
+    border: solid 1px #35384c;
+    padding: 8px;
+    color: #fafafa;
+    background: #35384c;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 15px;
+    font-size: 15px;
+    margin: 0 6px 0 0;
+  }
+  div.left2 input[type=text]:focus {
+    border: solid 1px #1a3853;
+    outline: none;
+  }
+  div.left2 label {
+    display: inline-block;
+    height: 15px;
+    padding: 8px 0 8px 0;
+    color: #959bad;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0 6px 0 0;
+  }
+  .left2_w5 {
+    width: 250px;
+  }
+  .left2_w4 {
+    width: 200px;
+  }
+  .left2_w3 {
+    width: 150px;
+  }
+  .left2_w2 {
+    width: 100px;
+  }
+  .left2_w1 {
+    width: 50px;
+  }
+  div.left2 input[type=checkbox] {
+    border: solid 1px #35384c;
+    padding: 8px;
+    color: #fafafa;
+    background: #35384c;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 15px;
+    font-size: 15px;
+    margin: 0 6px 0 0;
+    outline: none;
+  }
+  div.left2 input[type=checkbox]:focus {
+    border: solid 1px #1a3853;
+    outline: none;
+  }
+
+  div.left2 input[type=radio] {
+    border: solid 1px #35384c;
+    padding: 8px;
+    color: #fafafa;
+    background: #35384c;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 15px;
+    font-size: 15px;
+    margin: 0 6px 0 0;
+    outline: none;
+  }
+  div.left2 input[type=radio]:focus {
+    border: solid 1px #1a3853;
+    outline: none;
+  }
+  div.left2 select {
+    border: solid 1px #35384c;
+    padding: 8px;
+    color: #fafafa;
+    background: #35384c;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 15px;
+    font-size: 15px;
+    margin: 0 6px 0 0;
+  }
+  div.left2 select:focus {
+    border: solid 1px #1a3853;
+    outline: none;
+  }
 </style>
 <body>
   <div class="bottom">
@@ -168,6 +272,81 @@
           <div class="left1_icon">ICON</div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="left2">
+    <div class="left2_title">FILE MANAGER</div>
+    <div>
+      <label>A label for something:</label><br/>
+      <input type="text" class="left2_w5"/>
+    </div>
+    <div>
+      <input type="text" class="left2_w4"/>
+    </div>
+    <div>
+      <input type="text" class="left2_w3"/>
+    </div>
+    <div>
+      <input type="text" class="left2_w2"/>
+    </div>
+    <div>
+      <label class="left2_w2">A label:</label>
+      <input type="text" class="left2_w1"/><input type="text" class="left2_w1"/><input type="text" class="left2_w1"/>
+    </div>
+    <div>
+      <label class="left2_w3">A another label:</label>
+      <input type="text" class="left2_w1"/>
+    </div>
+    <div>
+      <label class="left2_w1">X:</label>
+      <input type="text" class="left2_w1"/>
+      <label class="left2_w1">Y:</label>
+      <input type="text" class="left2_w1"/>
+    </div>
+    <div>
+      <label class="left2_w1">Label:</label>
+      <input type="checkbox"/>
+    </div>
+    <div>
+      <input type="checkbox"/>
+      <label class="left2_w4">Long label that describes it</label>
+      <br/>
+      <input type="checkbox"/>
+      <label class="left2_w4">Another long label one</label>
+      <br/>
+      <input type="checkbox"/>
+      <label class="left2_w2">And value:</label>
+      <input type="text" class="left2_w2"/>
+    </div>
+    <div>
+      <input type="radio"/>
+      <label class="left2_w4">Long label that describes it</label>
+      <br/>
+      <input type="radio"/>
+      <label class="left2_w4">Another long label one</label>
+    </div>
+    <div>
+      <input type="radio"/>
+      <label class="left2_w1">One</label>
+      <input type="radio"/>
+      <label class="left2_w1">Two</label>
+      <input type="radio"/>
+      <label class="left2_w1">Three</label>
+    </div>
+    <div>
+      <input type="checkbox"/>
+      <label class="left2_w2">And select:</label>
+      <select class="left2_w2">
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+    <div>
+      <label class="left2_w5">Quite long description of the label:</label><br/>
+      <select class="left2_w5">
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
     </div>
   </div>
 </body>
