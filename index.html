@@ -166,6 +166,11 @@
     border: solid 1px #1a3853;
     outline: none;
   }
+  div.left2 input[type=text]:disabled {
+    border: solid 1px #1a3853;
+    outline: none;
+    background: #35384c;
+  }
   div.left2 label {
     display: inline-block;
     height: 15px;
@@ -235,6 +240,42 @@
     border: solid 1px #1a3853;
     outline: none;
   }
+  div.left2 button {
+    border: solid 1px #35384c;
+    padding: 8px;
+    color: #fafafa;
+    background: #35384c;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 15px;
+    font-size: 15px;
+    margin: 0 6px 0 0;
+  }
+  div.left2 button:focus {
+    border: solid 1px #1a3853;
+    outline: none;
+  }
+  div.left2 button:hover {
+    background: #fafafa;
+    color: #35384c;
+    cursor: pointer;
+  }
+  div.left2_icon {
+    width: 25px;
+    height: 25px;
+    color: #fafafa;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    display: inline-block;
+  }
+  div.left2_info {
+    color: #fafafa;
+    background: #35384c;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 13px;
+    font-size: 13px;
+    padding: 12px;
+    text-align: center;
+  }
 </style>
 <body>
   <div class="bottom">
@@ -281,7 +322,7 @@
       <input type="text" class="left2_w5"/>
     </div>
     <div>
-      <input type="text" class="left2_w4"/>
+      <input type="text" class="left2_w4" disabled/>
     </div>
     <div>
       <input type="text" class="left2_w3"/>
@@ -347,6 +388,22 @@
         <option>Option 1</option>
         <option>Option 2</option>
       </select>
+    </div>
+    <div>
+      <button class="left2_w1">Btn1</button>
+      <button class="left2_w2">Button 2</button>
+    </div>
+    <div>
+      <label class="left2_w2">And button:</label><button class="left2_w3">Long button 3</button>
+    </div>
+    <div>
+      <label class="left2_w2">A label:</label>
+      <div class="left2_icon">A</div>
+      <div class="left2_icon">B</div>
+      <div class="left2_icon">C</div>
+    </div>
+    <div class="left2_info">
+      This is a tiny box with information inside.
     </div>
   </div>
 </body>
