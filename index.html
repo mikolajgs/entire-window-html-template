@@ -1,283 +1,163 @@
 <html>
 <head>
 <title>app_template__</title>
+<link rel="stylesheet" href="body.css">
+<link rel="stylesheet" href="bottom.css">
+<link rel="stylesheet" href="bottom_message.css">
+<link rel="stylesheet" href="col1.css">
+<link rel="stylesheet" href="col2.css">
+<link rel="stylesheet" href="col3.css">
+<link rel="stylesheet" href="col4.css">
+<link rel="stylesheet" href="col5.css">
 </head>
-<style>
-  body {
-    background: #222336;
-  }
-  div.bottom {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    background: #35576e;
-    z-index: 500;
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fefefe;
-  }
-  div.bottom_text {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    margin: 0;
-  }
-  div.bottom_text > div {
-    padding: 5px;
-  }
-  div.bottom_text_left {
-    flex-grow: 6;
-  }
-  div.bottom_text_right {
-    flex-grow: 4;
-  }
-  div.bottom_text_status {
-    flex-grow: 1;
-    background: #c97539;
-  }
-  div.bottom_text_center {
-    flex-grow: 20;
-    text-align: center;
-  }
-  div.bottom_status_info {
-    display: block;
-    position: fixed;
-    bottom: 30px;
-    right: 5px;
-    background: #433337;
-    border: solid 1px #c97539;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffb684;
-    width: 550px;
-    height: 100px;
-    line-height: 18px;
-  }
-  div.bottom_status_info a, div.bottom_status_info a:visited {
-    color: #9d9eb7;
-    text-decoration: none;
-  }
-  div.bottom_status_info a:hover {
-    color: #9f9fee;
-    text-decoration: underline;
-  }
-  div.bottom_status_info_text {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    margin: 0;
-  }
-  div.bottom_status_info_left {
-    flex: 1;
-    padding: 20px 0 0 20px;
-    text-align: center;
-  }
-  div.bottom_status_info_right {
-    flex: 6;
-    padding: 20px;
-  }
-
-  div.left1 {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50px;
-    background: #2a2c3f;
-    border-right: solid 1px #3f4455;
-    z-index: 490;
-  }
-  div.left1_contents {
-    display: flex;
-    flex-flow: column;
-    margin: 0;
-    padding: 0;
-    align-items: flex-end;
-  }
-  div.left1_top {
-    margin: 0;
-    padding: 0;
-  }
-  div.left1_bottom {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 25;
-    left: 0;
-  }
-  div.left1_logo {
-    width: 50px;
-    height: 50px;
-    display: block;
-    text-align: center;
-  }
-  div.left1_icon {
-    width: 47px;
-    height: 50px;
-    border-left: solid 3px #2a2c3f;
-    display: block;
-    color: #737376;
-    text-align: center;
-  }
-  div.left1_icon:hover {
-    color: #f1f1f1;
-    cursor: pointer;
-  }
-  div.left1_icon_selected {
-    border-left: solid 3px #007aa6;
-    color: #f1f1f1;
-  }
-
-  div.left2 {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 51;
-    z-index: 400;
-    width: 290px;
-    background: #222336;
-    border-right: solid 1px #3f4455;
-    height: 100%;
-  }
-
-  div.left2 > div {
-    margin: 12px;
-  }
-  div.left2_title {
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-  }
-  div.left2 input[type=text] {
-    border: solid 1px #35384c;
-    padding: 8px;
-    color: #fafafa;
-    background: #35384c;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 15px;
-    font-size: 15px;
-    margin: 0 6px 0 0;
-  }
-  div.left2 input[type=text]:focus {
-    border: solid 1px #1a3853;
-    outline: none;
-  }
-  div.left2 input[type=text]:disabled {
-    border: solid 1px #1a3853;
-    outline: none;
-    background: #35384c;
-  }
-  div.left2 label {
-    display: inline-block;
-    height: 15px;
-    padding: 8px 0 8px 0;
-    color: #959bad;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    margin: 0 6px 0 0;
-  }
-  .left2_w5 {
-    width: 250px;
-  }
-  .left2_w4 {
-    width: 200px;
-  }
-  .left2_w3 {
-    width: 150px;
-  }
-  .left2_w2 {
-    width: 100px;
-  }
-  .left2_w1 {
-    width: 50px;
-  }
-  div.left2 input[type=checkbox] {
-    border: solid 1px #35384c;
-    padding: 8px;
-    color: #fafafa;
-    background: #35384c;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 15px;
-    font-size: 15px;
-    margin: 0 6px 0 0;
-    outline: none;
-  }
-  div.left2 input[type=checkbox]:focus {
-    border: solid 1px #1a3853;
-    outline: none;
-  }
-
-  div.left2 input[type=radio] {
-    border: solid 1px #35384c;
-    padding: 8px;
-    color: #fafafa;
-    background: #35384c;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 15px;
-    font-size: 15px;
-    margin: 0 6px 0 0;
-    outline: none;
-  }
-  div.left2 input[type=radio]:focus {
-    border: solid 1px #1a3853;
-    outline: none;
-  }
-  div.left2 select {
-    border: solid 1px #35384c;
-    padding: 8px;
-    color: #fafafa;
-    background: #35384c;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 15px;
-    font-size: 15px;
-    margin: 0 6px 0 0;
-  }
-  div.left2 select:focus {
-    border: solid 1px #1a3853;
-    outline: none;
-  }
-  div.left2 button {
-    border: solid 1px #35384c;
-    padding: 8px;
-    color: #fafafa;
-    background: #35384c;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 15px;
-    font-size: 15px;
-    margin: 0 6px 0 0;
-  }
-  div.left2 button:focus {
-    border: solid 1px #1a3853;
-    outline: none;
-  }
-  div.left2 button:hover {
-    background: #fafafa;
-    color: #35384c;
-    cursor: pointer;
-  }
-  div.left2_icon {
-    width: 25px;
-    height: 25px;
-    color: #fafafa;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    display: inline-block;
-  }
-  div.left2_info {
-    color: #fafafa;
-    background: #35384c;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 13px;
-    font-size: 13px;
-    padding: 12px;
-    text-align: center;
-  }
-</style>
 <body>
+  <div class="columns">
+    <div class="col1">
+      <div class="col_top">
+        <div class="col_logo">LOGO</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon col_icon_selected">ICON</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+      </div>
+      <div class="col_bottom">
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+      </div>
+    </div>
+    <div class="col2">
+      <div class="col_title">STRUCTS</div>
+      <div>
+        <ul>
+          <li><a onclick="alert('aa');">Persons</a></li>
+          <li><a onclick="alert('aa');">Groups</a></li>
+          <li><a onclick="alert('aa');">Products</a></li>
+          <li><a onclick="alert('aa');">Kinds</a></li>
+        </ul>
+      </div>
+      <div>
+        <label>A label for something:</label><br/>
+        <input type="text" class="col_w5"/>
+      </div>
+      <div>
+        <input type="text" class="col_w4" disabled/>
+      </div>
+      <div>
+        <input type="text" class="col_w3"/>
+      </div>
+      <div>
+        <input type="text" class="col_w2"/>
+      </div>
+      <div>
+        <label class="col_w2">A label:</label>
+        <input type="text" class="col_w1"/><input type="text" class="col_w1"/><input type="text" class="col_w1"/>
+      </div>
+      <div>
+        <label class="col_w3">A another label:</label>
+        <input type="text" class="col_w1"/>
+      </div>
+      <div>
+        <label class="col_w1">X:</label>
+        <input type="text" class="col_w1"/>
+        <label class="col_w1">Y:</label>
+        <input type="text" class="col_w1"/>
+      </div>
+      <div>
+        <label class="col_w1">Label:</label>
+        <input type="checkbox"/>
+      </div>
+      <div>
+        <input type="checkbox"/>
+        <label class="col_w4">Long label that describes it</label>
+        <br/>
+        <input type="checkbox"/>
+        <label class="col_w4">Another long label one</label>
+        <br/>
+        <input type="checkbox"/>
+        <label class="col_w2">And value:</label>
+        <input type="text" class="col_w2"/>
+      </div>
+      <div>
+        <input type="radio"/>
+        <label class="col_w4">Long label that describes it</label>
+        <br/>
+        <input type="radio"/>
+        <label class="col_w4">Another long label one</label>
+      </div>
+      <div>
+        <input type="radio"/>
+        <label class="col_w1">One</label>
+        <input type="radio"/>
+        <label class="col_w1">Two</label>
+        <input type="radio"/>
+        <label class="col_w1">Three</label>
+      </div>
+      <div>
+        <input type="checkbox"/>
+        <label class="col_w2">And select:</label>
+        <select class="col_w2">
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+      </div>
+      <div>
+        <label class="col_w5">Quite long description of the label:</label><br/>
+        <select class="col_w5">
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+      </div>
+      <div>
+        <button class="col_w1">Btn1</button>
+        <button class="col_w2">Button 2</button>
+      </div>
+      <div>
+        <label class="col_w2">And button:</label><button class="col_w3">Long button 3</button>
+      </div>
+      <div>
+        <label class="col_w2">A label:</label>
+        <div class="col_icon">A</div>
+        <div class="col_icon">B</div>
+        <div class="col_icon">C</div>
+      </div>
+      <div class="col_info">
+        This is a tiny box with information inside.
+      </div>
+    </div>
+    <div class="col3">3</div>
+    <div class="col4">
+      <div class="col_title">STRUCTS</div>
+      <div>
+        <ul>
+          <li><a onclick="alert('aa');">Persons</a></li>
+          <li><a onclick="alert('aa');">Groups</a></li>
+          <li><a onclick="alert('aa');">Products</a></li>
+          <li><a onclick="alert('aa');">Kinds</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col5">
+      <div class="col_top">
+        <div class="col_logo">LOGO</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon col_icon_selected">ICON</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+      </div>
+      <div class="col_bottom">
+        <div class="col_icon">ICON</div>
+        <div class="col_icon">ICON</div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="bottom">
     <div class="bottom_text">
       <div class="bottom_text_left">Text on the left</div>
@@ -286,125 +166,15 @@
       <div class="bottom_text_status">Status box</div>
     </div>
   </div>
-  <div class="bottom_status_info">
-    <div class="bottom_status_info_text">
-      <div class="bottom_status_info_left">icon</div>
-      <div class="bottom_status_info_right">
+  <div class="bottom_message">
+    <div class="bottom_message_text">
+      <div class="bottom_message_left">icon</div>
+      <div class="bottom_message_right">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>
         <a href="https://forthcoming.systems">more</a>
       </div>
   </div>
-  <div class="left1">
-      <div class="left1_contents">
-        <div class="left1_top">
-          <div class="left1_logo">LOGO</div>
-          <div class="left1_icon">ICON</div>
-          <div class="left1_icon left1_icon_selected">ICON</div>
-          <div class="left1_icon">ICON</div>
-          <div class="left1_icon">ICON</div>
-          <div class="left1_icon">ICON</div>
-          <div class="left1_icon">ICON</div>
-          <div class="left1_icon">ICON</div>
-        </div>
-        <div class="left1_bottom">
-          <div class="left1_icon">ICON</div>
-          <div class="left1_icon">ICON</div>
-          <div class="left1_icon">ICON</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="left2">
-    <div class="left2_title">FILE MANAGER</div>
-    <div>
-      <label>A label for something:</label><br/>
-      <input type="text" class="left2_w5"/>
-    </div>
-    <div>
-      <input type="text" class="left2_w4" disabled/>
-    </div>
-    <div>
-      <input type="text" class="left2_w3"/>
-    </div>
-    <div>
-      <input type="text" class="left2_w2"/>
-    </div>
-    <div>
-      <label class="left2_w2">A label:</label>
-      <input type="text" class="left2_w1"/><input type="text" class="left2_w1"/><input type="text" class="left2_w1"/>
-    </div>
-    <div>
-      <label class="left2_w3">A another label:</label>
-      <input type="text" class="left2_w1"/>
-    </div>
-    <div>
-      <label class="left2_w1">X:</label>
-      <input type="text" class="left2_w1"/>
-      <label class="left2_w1">Y:</label>
-      <input type="text" class="left2_w1"/>
-    </div>
-    <div>
-      <label class="left2_w1">Label:</label>
-      <input type="checkbox"/>
-    </div>
-    <div>
-      <input type="checkbox"/>
-      <label class="left2_w4">Long label that describes it</label>
-      <br/>
-      <input type="checkbox"/>
-      <label class="left2_w4">Another long label one</label>
-      <br/>
-      <input type="checkbox"/>
-      <label class="left2_w2">And value:</label>
-      <input type="text" class="left2_w2"/>
-    </div>
-    <div>
-      <input type="radio"/>
-      <label class="left2_w4">Long label that describes it</label>
-      <br/>
-      <input type="radio"/>
-      <label class="left2_w4">Another long label one</label>
-    </div>
-    <div>
-      <input type="radio"/>
-      <label class="left2_w1">One</label>
-      <input type="radio"/>
-      <label class="left2_w1">Two</label>
-      <input type="radio"/>
-      <label class="left2_w1">Three</label>
-    </div>
-    <div>
-      <input type="checkbox"/>
-      <label class="left2_w2">And select:</label>
-      <select class="left2_w2">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-    </div>
-    <div>
-      <label class="left2_w5">Quite long description of the label:</label><br/>
-      <select class="left2_w5">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-    </div>
-    <div>
-      <button class="left2_w1">Btn1</button>
-      <button class="left2_w2">Button 2</button>
-    </div>
-    <div>
-      <label class="left2_w2">And button:</label><button class="left2_w3">Long button 3</button>
-    </div>
-    <div>
-      <label class="left2_w2">A label:</label>
-      <div class="left2_icon">A</div>
-      <div class="left2_icon">B</div>
-      <div class="left2_icon">C</div>
-    </div>
-    <div class="left2_info">
-      This is a tiny box with information inside.
-    </div>
-  </div>
+
 </body>
 </html>

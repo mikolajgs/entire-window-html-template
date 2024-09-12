@@ -1,5 +1,5 @@
 # html-app-template
-A simple HTML template for web applications
+A simple HTML template for web applications 
 
 ### left2
 Wed, Thu, Fri, Sat, Sun

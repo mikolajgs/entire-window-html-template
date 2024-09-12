@@ -1,0 +1,8 @@
+.col4 {
+  display: block;
+  width: 290px;
+  background: #222336;
+  border-left: solid 1px #3f4455;
+  height: 100%;
+  overflow-y: scroll;
+}

@@ -1,0 +1,29 @@
+.col5 {
+  display: block;
+  height: 100%;
+  width: 50px;
+  background: #2a2c3f;
+  border-left: solid 1px #3f4455;
+}
+
+.col5 .col_bottom {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 25;
+  right: 0;
+}
+
+.col5 .col_icon {
+  width: 47px;
+  height: 50px;
+  border-right: solid 3px #2a2c3f;
+  display: block;
+  color: #737376;
+  text-align: center;
+}
+
+.col5 .col_icon_selected {
+  border-right: solid 3px #007aa6;
+  color: #f1f1f1;
+}

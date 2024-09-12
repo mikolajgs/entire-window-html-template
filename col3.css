@@ -1,0 +1,6 @@
+.col3 {
+  display: block;
+  flex-grow: 1;
+  background: #2a2c3f;
+  height: 100%;
+}
