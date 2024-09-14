@@ -1,7 +1,7 @@
 .col1 {
   display: block;
   height: 100%;
-  width: 50px;
+  width: var(--col1-width);
   background: #2a2c3f;
   border-right: solid 1px #3f4455;
   flex-flow: column;
