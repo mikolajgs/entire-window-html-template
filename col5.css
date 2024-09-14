@@ -4,6 +4,7 @@
   width: 50px;
   background: #2a2c3f;
   border-left: solid 1px #3f4455;
+  padding-top: var(--top-height);
 }
 
 .col5 .col_bottom {

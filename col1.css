@@ -6,6 +6,7 @@
   border-right: solid 1px #3f4455;
   flex-flow: column;
   align-items: flex-end;
+  padding-top: var(--top-height);
 }
 
 .col1 .col_top,
@@ -19,7 +20,7 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  bottom: 25;
+  bottom: var(--bottom-height);
   left: 0;
 }
 
