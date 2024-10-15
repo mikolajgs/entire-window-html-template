@@ -199,6 +199,10 @@ body {
 
 #left_icons .top i:hover {
   color: var(--color3);
+  border-bottom: solid 1px var(--color3);
+  border-right: solid 1px var(--color3);
+  border-top: solid 1px var(--color3);
+  border-left: solid 1px var(--color3);
 }
 
 #left_icons .bottom {
