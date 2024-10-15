@@ -2,49 +2,68 @@
 <head>
 <title>app_template__</title>
 <link rel="stylesheet" href="config.css">
-<link rel="stylesheet" href="body.css">
-<link rel="stylesheet" href="bottom.css">
-<link rel="stylesheet" href="bottom_message.css">
-<link rel="stylesheet" href="col1.css">
-<link rel="stylesheet" href="col2.css">
-<link rel="stylesheet" href="col3.css">
-<link rel="stylesheet" href="col4.css">
-<link rel="stylesheet" href="col5.css">
-<link rel="stylesheet" href="top.css">
+<link rel="stylesheet" href="styles.css">
+<link href="fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet">
+<link href="fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet">
 </head>
 <body>
-  <div class="columns">
-    <div class="col1">
-      <div class="col_top">
+  <div id="layout">
+    <div id="left_icons" class="bg_c9">
+      <div class="top">
+        <div class="header">Tools</div>
+        <i class="fa-solid fa-arrow-pointer" alt="Select"></i>
+        <i class="fa-solid fa-up-down-left-right pressed" alt="Move"></i>
+        <i class="fa-solid fa-trash" alt="Delete"></i>
+        <i class="fa-solid fa-rotate" alt="Modify"></i>
+        <i class="fa-solid fa-magnifying-glass" alt="Zoom"></i>
+        <i class="fa-solid fa-pencil" alt="Pencil"></i>
+        <i class="fa-solid fa-minus" alt="Line"></i>
+        <i class="fa-solid fa-shapes" alt="Shape"></i>
+        <i class="fa-solid fa-fill" alt="Fill"></i>
+        <i class="fa-solid fa-eraser" alt="Eraser"></i>
+        <i class="fa-solid fa-eye-dropper" alt="Color picker"></i>
+        <i class="fa-solid fa-wand-magic-sparkles" alt="Magic wand"></i>
+        <div class="header">Colors</div>
+        <i style="background-color: #ff204e;" class="pressed" alt="Foreground color">&nbsp;</i>
+        <i style="background-color: #5d0e41;" class="pressed" alt="Background color">&nbsp;</i>
+        <div class="header">Pallette</div>
+        <i style="background-color: #b4d6cd;"></i>
+        <i style="background-color: #ffda76;"></i>
+        <i style="background-color: #ff8c9e;"></i>
+        <i style="background-color: #ff4e88;"></i>
+        <i style="background-color: #a02334;"></i>
+        <i style="background-color: #ffad60;"></i>
+        <i style="background-color: #ffeead;"></i>
+        <i style="background-color: #96ceb6;"></i>
       </div>
-      <div class="col_bottom">
+      <div class="bottom">
       </div>
     </div>
-    <div class="col2">
-      <div class="col_info">
+    <div id="left_text" class="bg_c1">
+      <div class="info bg_c12 fg_c11">
         This is a tiny box with information inside.
       </div>
     </div>
-    <div class="col3"></div>
-    <div class="col4">
+    <div id="center_text" class="bg_c9"></div>
+    <div id="right_text" class="bg_c1">
     </div>
-    <div class="col5">
+    <div id="right_icons" class="bg_c9">
     </div>
   </div>
 
 
-  <div class="bottom">
-    <div class="bottom_text">
-      <div class="bottom_text_left">Text on the left</div>
-      <div class="bottom_text_center">Text in the middle</div>
-      <div class="bottom_text_right">Text on the right</div>
-      <div class="bottom_text_status">Status box</div>
+  <div id="bottom" class="bg_c2">
+    <div class="text">
+      <div class="left fg_c3">Text on the left</div>
+      <div class="center fg_c3">Text in the middle</div>
+      <div class="right fg_c3">Text on the right</div>
+      <div class="status bg_c4 fg_c3">Status box</div>
     </div>
   </div>
-  <div class="bottom_message">
-    <div class="bottom_message_text">
-      <div class="bottom_message_left">icon</div>
-      <div class="bottom_message_right">
+  <div id="bottom_message" class="bg_c5 fg_c6">
+    <div class="text">
+      <div class="left">icon</div>
+      <div class="right">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>
         <a href="https://forthcoming.systems">more</a>
@@ -52,23 +71,23 @@
     </div>
   </div>
 
-  <div class="top">
-    <div class="top_dropdown">
-      <button>Home</button><div class="top_dropdown_content">
-        <a href="#">Link 1</a>
+  <div id="top_menu">
+    <div class="dropdown">
+      <button>File</button><div class="dropdown_content">
+        <a href="#">New</a>
+        <a href="#">Save</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div><div class="dropdown">
+      <button>Edit</button><div class="dropdown_content">
+        <a href="#">Resize</a>
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
       </div>
-    </div><div class="top_dropdown">
-      <button>News</button><div class="top_dropdown_content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div><div class="top_dropdown">
-      <button>Dropdown</button><div class="top_dropdown_content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
+    </div><div class="dropdown">
+      <button>About</button><div class="dropdown_content">
+        <a href="#">Authors</a>
+        <a href="#">Source code</a>
         <a href="#">Link 3</a>
       </div>
     </div>
