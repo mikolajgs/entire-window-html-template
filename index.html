@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="layout">
-    <div id="left_icons" class="bg_c9">
+    <div id="left_icons">
       <div class="top">
         <div class="header">Tools</div>
         <i class="fa-solid fa-arrow-pointer" alt="Select"></i>
@@ -24,8 +24,8 @@
         <i class="fa-solid fa-eye-dropper" alt="Color picker"></i>
         <i class="fa-solid fa-wand-magic-sparkles" alt="Magic wand"></i>
         <div class="header">Colors</div>
-        <i style="background-color: #ff204e;" class="pressed" alt="Foreground color">&nbsp;</i>
-        <i style="background-color: #5d0e41;" class="pressed" alt="Background color">&nbsp;</i>
+        <i style="background-color: #ff204e;" class="" alt="Foreground color">&nbsp;</i>
+        <i style="background-color: #5d0e41;" class="" alt="Background color">&nbsp;</i>
         <div class="header">Pallette</div>
         <i style="background-color: #b4d6cd;"></i>
         <i style="background-color: #ffda76;"></i>
@@ -39,30 +39,43 @@
       <div class="bottom">
       </div>
     </div>
-    <div id="left_text" class="bg_c1">
-      <div class="info bg_c12 fg_c11">
-        This is a tiny box with information inside.
+    <div id="left_text">
+      <div class="header">Structs</div>
+      <div class="info">
+        Click on the struct name to see items.
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-list"></i> User</li>
+        <li><i class="fa-solid fa-list"></i> UserGroup</li>
+        <li><i class="fa-solid fa-list"></i> Product</li>
+        <li><i class="fa-solid fa-list"></i> ProductGroup</li>
+        <li><i class="fa-solid fa-list"></i> Article</li>
+        <li><i class="fa-solid fa-list"></i> Review</li>
+      </ul>
+      <div class="header">Views</div>
+      <div class="info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </div>
     </div>
     <div id="center_text" class="bg_c9"></div>
-    <div id="right_text" class="bg_c1">
+    <div id="right_text">
     </div>
     <div id="right_icons" class="bg_c9">
     </div>
   </div>
 
 
-  <div id="bottom" class="bg_c2">
+  <div id="bottom">
     <div class="text">
-      <div class="left fg_c3">Text on the left</div>
-      <div class="center fg_c3">Text in the middle</div>
-      <div class="right fg_c3">Text on the right</div>
-      <div class="status bg_c4 fg_c3">Status box</div>
+      <div class="left">Text on the left</div>
+      <div class="center">Text in the middle</div>
+      <div class="right">Text on the right</div>
+      <div class="status">Status box</div>
     </div>
   </div>
-  <div id="bottom_message" class="bg_c5 fg_c6">
+  <div id="bottom_message">
     <div class="text">
-      <div class="left">icon</div>
+      <div class="left"><i class="fa-solid fa-triangle-exclamation" alt="Warning"></i></div>
       <div class="right">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>

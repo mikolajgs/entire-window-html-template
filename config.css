@@ -19,13 +19,9 @@
   --color5: #433337;
   --color6: #ffb684;
   --color7: #9d9eb7;
-  --color8: #9f9fee;
   --color9: #2a2c3f;
   --color10: #3f4455;
   --color11: #fafafa;
-  --color12: #35384c;
-  --color13: #2c856c;
-  --color14: #29a2b1;
 
   --bottom-font-size: 12px;
   --bottom-left-flex-grow: 6;
@@ -43,6 +39,9 @@
   --bottom-message-left-flex: 1;
   --bottom-message-right-flex: 6;
 
+  --bottom-message-icon-font-size: 34px;
+  --bottom-message-icon-margin-top: 8px;
+
   --left-icons-top-text-align: center;
   --left-icons-font-size: 20px;
   --left-icons-header-font-size: 12px;
@@ -50,7 +49,11 @@
   --left-text-items-margin: 15px;
   --left-text-info-font-size: 13px;
   --left-text-info-padding: 12px;
-  --left-text-info-text-align: center;
+  --left-text-info-text-align: left;
+  --left-text-header-font-size: 12px;
+
+  --left-text-ul-font-size: 14px;
+  --left-text-ul-margin: 0;
 
   --top-menu-font-size: 14px;
 }
