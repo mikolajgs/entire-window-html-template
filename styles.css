@@ -195,7 +195,8 @@ body {
 }
 
 #left_text .header,
-#right_text .header {
+#right_text .header,
+#center_text .header {
   text-align: var(--left-text-header-text-align);
   font-size: var(--left-text-header-font-size);
   line-height: var(--left-text-header-font-size);
@@ -208,8 +209,14 @@ body {
   color: var(--color3);
 }
 
+#center_text .glow {
+  text-shadow: 0 0 2px #000000;
+  letter-spacing: 1px;
+}
+
 #left_text .header i,
-#right_text .header i {
+#right_text .header i,
+#center_text .header i {
   margin-left: 6px;
   margin-right: 8px;
 }
