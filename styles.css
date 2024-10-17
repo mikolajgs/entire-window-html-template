@@ -71,10 +71,10 @@ body {
   right: var(--bottom-message-distance);
   border: solid 1px var(--color4);
   font-size: var(--bottom-message-font-size);
+  line-height: var(--bottom-message-line-height);
   font-family: var(--font-family);
   width: var(--bottom-message-width);
   height: var(--bottom-message-height);
-  line-height: var(--bottom-message-line-height);
   z-index: var(--bottom-message-zindex);
   color: var(--color6);
   background: var(--color5);
@@ -140,8 +140,8 @@ body {
   border: solid 1px var(--color1);
   background-image: linear-gradient(var(--color1), var(--color9));
   line-height: var(--left-text-header-font-size);
-  padding-top: 5px;
-  padding-bottom: 6px;
+  padding-top: calc(var(--left-text-header-font-size) / 2);
+  padding-bottom: calc(var(--left-text-header-font-size) / 2);
 }
 
 #left_icons .top i {
@@ -194,34 +194,34 @@ body {
   color: var(--color7);
 }
 
-#left_text .header {
+#left_text .header,
+#right_text .header {
   text-align: var(--left-text-header-text-align);
   font-size: var(--left-text-header-font-size);
+  line-height: var(--left-text-header-font-size);
   border: solid 1px var(--color1);
   background-image: linear-gradient(var(--color1), var(--color9));
   margin-top: 1px;
-  padding-top: 4px;
+  padding-top: calc(var(--left-text-header-font-size) / 2);
   padding-left: var(--left-text-info-padding);
-  padding-bottom: 4px;
-  padding-right: 4px;
+  padding-bottom: calc(var(--left-text-header-font-size) / 2);
   color: var(--color3);
 }
 
-#left_text .header i {
+#left_text .header i,
+#right_text .header i {
   margin-left: 6px;
   margin-right: 8px;
 }
 
-#left_text .info {
+#left_text .info,
+#right_text .info {
   font-family: var(--font-family);
   line-height: var(--left-text-info-font-size);
   font-size: var(--left-text-info-font-size);
   padding: var(--left-text-info-padding);
   text-align: var(--left-text-info-text-align);
-  margin-top: var(--left-text-items-margin);
-  margin-left: var(--left-text-items-margin);
-  margin-right: var(--left-text-items-margin);
-  margin-bottom: 0;
+  margin: var(--left-text-items-margin);
   color: var(--color7);
   border-left: dotted 1px var(--color7);
 }
@@ -275,6 +275,7 @@ body {
   padding-top: var(--top-height);
   padding-bottom: var(--bottom-height);
   background: var(--color9);
+  color: var(--color7);
 }
 
 /* right icons */
@@ -314,7 +315,6 @@ body {
   color: var(--color3);
   height: var(--top-height);
   border-bottom: solid 1px var(--color10);
-  padding-left: var(--col1-width);
 }
 
 #top_menu button {
