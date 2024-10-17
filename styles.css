@@ -233,13 +233,21 @@ body {
 }
 
 #left_text .header {
-  text-align: center;
+  text-align: var(--left-text-header-text-align);
   font-size: var(--left-text-header-font-size);
   border: solid 1px var(--color1);
   color: var(--color1);
   margin-top: 1px;
   background: var(--color3);
-  letter-spacing: 1px;
+  padding-top: 4px;
+  padding-left: var(--left-text-info-padding);
+  padding-bottom: 4px;
+  padding-right: 4px;
+}
+
+#left_text .header i {
+  margin-left: 6px;
+  margin-right: 8px;
 }
 
 #left_text .info {
