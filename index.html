@@ -5,8 +5,21 @@
 <link rel="stylesheet" href="styles.css">
 <link href="fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet">
 <link href="fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet">
+<script>
+  function add_table_trs() {
+    var c = document.getElementById("copyme");
+    var p = document.getElementById("copyme").parentElement;
+
+    c.remove();
+    for (var i=0; i<101; i++) {
+      var newTr = document.createElement("tr");
+      newTr.innerHTML = c.innerHTML.replace("%id", (i+1).toString());
+      p.appendChild(newTr);
+    }
+  }
+</script>
 </head>
-<body>
+<body onload="add_table_trs();">
   <div id="layout">
     <div id="left_icons">
       <div class="top">
@@ -59,6 +72,37 @@
     </div>
     <div id="center_text">
       <div class="header glow"><i class="fa-solid fa-user-group" alt="Structs"></i>UserGroup struct items</div>
+      <div class="table">
+        <table>
+          <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Group</th>
+            <th>Price</th>
+            <th>Created</th>
+            <th>Created By</th>
+            <th>Active</th>
+            <th>Actions</th>
+          </thead>
+          <tbody>
+            <tr id="copyme">
+              <td>%id</td>
+              <td>Bottle of milk</td>
+              <td>MLK1LA</td>
+              <td>Dairy</td>
+              <td>1,35</td>
+              <td>2022-03-14 13:33:40</td>
+              <td>Jane Doe</td>
+              <td>true</td>
+              <td style="text-align: center">
+                <i class="fa-solid fa-pen"></i>
+                <i class="fa-solid fa-trash"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div id="right_text">
       <div class="header"><i class="fa-solid fa-image" alt="Image properties"></i>Image properties</div>

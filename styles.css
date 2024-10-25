@@ -260,6 +260,7 @@ body {
   padding-top: var(--top-height);
   padding-bottom: var(--bottom-height);
   background: var(--color1);
+  overflow-y: scroll;
 }
 
 #center_text .title {
@@ -270,6 +271,34 @@ body {
 
 #center_text .title i {
   margin-right: 10px;
+}
+
+#center_text .table table {
+  width: 100%;
+  color: var(--color7);
+  font-size: var(--center-text-table-font-size);
+}
+
+#center_text .table th {
+  border: solid 1px var(--color7);
+  color: var(--color11);
+  font-weight: normal;
+  background-image: linear-gradient(var(--color1), var(--color2));
+}
+
+#center_text .table td {
+  border: dotted 1px var(--color7);
+  padding: 2px 4px 2px 4px;
+}
+
+#center_text .table tr:hover {
+  border: dotted 1px var(--color7);
+  background: var(--color2);
+}
+
+#center_text .table td i:hover {
+  color: var(--color3);
+  cursor: pointer;
 }
 
 /* right text */
