@@ -186,7 +186,7 @@ body {
   width: var(--left-text-width);
   border-right: solid 1px var(--color10);
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin: 0;
   padding-top: var(--top-height);
   padding-bottom: var(--bottom-height);
@@ -260,7 +260,7 @@ body {
   padding-top: var(--top-height);
   padding-bottom: var(--bottom-height);
   background: var(--color1);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #center_text .title {
@@ -271,6 +271,86 @@ body {
 
 #center_text .title i {
   margin-right: 10px;
+}
+
+#center_text .paging, #center_text .filter, #center_text .selection {
+  color: var(--color7);
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  padding-top: calc(var(--left-text-header-font-size) / 2);
+  padding-left: var(--left-text-info-padding);
+  padding-right: var(--left-text-info-padding);
+  padding-bottom: calc(var(--left-text-header-font-size) / 2);
+}
+
+#center_text .paging button, #center_text .paging select, #center_text .filter button, #center_text .selection button {
+  font-size: 16px;
+  border: solid 1px var(--color7);
+  color: var(--color11);
+  background: var(--color2);
+  padding: 4px;
+  border-radius: 3px;
+}
+
+#center_text .paging button {
+  width: 40px;
+}
+
+#center_text .paging button.selected {
+  color: var(--color2);
+  background: var(--color11);
+}
+
+#center_text .paging button:hover, #center_text .filter button:hover {
+  color: var(--color2);
+  background: var(--color11);
+  cursor: pointer;
+}
+
+#center_text .paging .pages {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#center_text .paging .items {
+  flex-grow: 1;
+  text-align: right;
+}
+
+#center_text .selection .left {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#center_text .selection .right {
+  flex-grow: 1;
+  text-align: right;
+}
+
+#center_text .filter {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+#center_text .filter .label {
+  line-height: 28px;
+}
+#center_text .filter .input {
+  flex-grow: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#center_text .filter input[type=text] {
+  font-size: 16px;
+  padding: 4px;
+  letter-spacing: 1px;
+  width: 100%;
+  border-radius: 3px;
+  border: dashed 1px var(--color7);
+  background-image: linear-gradient(var(--color1), var(--color2));
+  color: var(--color3);
 }
 
 #center_text .table table {
@@ -286,9 +366,32 @@ body {
   background-image: linear-gradient(var(--color1), var(--color2));
 }
 
+#center_text .table th .filter {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+#center_text .table th .filter .icon {
+  margin-top: 6px;
+}
+#center_text .table th .filter .input {
+  flex-grow: 1;
+}
+
+#center_text .table th input[type=text] {
+  border: dashed 1px var(--color7);
+  background-image: linear-gradient(var(--color1), var(--color2));
+  color: var(--color3);
+  font-size: var(--center-text-table-font-size);
+}
+
 #center_text .table td {
   border: dotted 1px var(--color7);
   padding: 2px 4px 2px 4px;
+}
+
+#center_text .table td:first-of-type {
+  width: 22px;
 }
 
 #center_text .table tr:hover {
@@ -307,7 +410,7 @@ body {
   width: var(--right-text-width);
   border-left: solid 1px var(--color10);
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-top: var(--top-height);
   padding-bottom: var(--bottom-height);
   background: var(--color9);

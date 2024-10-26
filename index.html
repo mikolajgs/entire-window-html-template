@@ -11,7 +11,7 @@
     var p = document.getElementById("copyme").parentElement;
 
     c.remove();
-    for (var i=0; i<101; i++) {
+    for (var i=0; i<25; i++) {
       var newTr = document.createElement("tr");
       newTr.innerHTML = c.innerHTML.replace("%id", (i+1).toString());
       p.appendChild(newTr);
@@ -72,21 +72,83 @@
     </div>
     <div id="center_text">
       <div class="header glow"><i class="fa-solid fa-user-group" alt="Structs"></i>UserGroup struct items</div>
+      <div class="paging">
+        <div class="pages">Page: <button>1</button> <button>2</button> ... <button>50</button> <button class="selected">51</button> <button>52</button> ... <button>134</button> <button>135</button></div>
+        <div class="items">Items per page: <select><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+      </div>
+      <div class="filter">
+        <div class="label">Advanced filter:</div>
+        <div class="input"><input type="text"/></div>
+        <div><button>Clear</button> <button>Filter</button></div>
+      </div>
+      <div class="selection">
+        <div class="left">Selection: <button>Select all</button> <button>Select none</button> <button>Invert selection</button></div>
+        <div class="right">Selected: <button>Delete</button></div>
+      </div>
       <div class="table">
         <table>
           <thead>
+            <th></th>
             <th>ID</th>
-            <th>Name</th>
-            <th>Code</th>
-            <th>Group</th>
-            <th>Price</th>
-            <th>Created</th>
-            <th>Created By</th>
-            <th>Active</th>
-            <th>Actions</th>
+            <th>
+              <div>Name</div>
+              <div class="filter">
+                <div class="input"><input type="text"/></div>
+                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+              </div>
+            </th>
+            <th>
+              <div>Code</div>
+              <div class="filter">
+                <div class="input"><input type="text"/></div>
+                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+              </div>
+            </th>
+            <th>
+              <div>Group</div>
+              <div class="filter">
+                <div class="input"><input type="text"/></div>
+                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+              </div>
+            </th>
+            <th>
+              <div>Price</div>
+              <div class="filter">
+                <div class="input"><input type="text"/></div>
+                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+              </div>
+            </th>
+            <th>
+              <div>Created</div>
+              <div class="filter">
+                <div class="input"><input type="text"/></div>
+                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+              </div>
+            </th>
+            <th>
+              <div>Created By</div>
+              <div class="filter">
+                <div class="input"><input type="text"/></div>
+                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+              </div>
+            </th>
+            <th>
+              <div>Active</div>
+              <div class="filter">
+                <div class="input"><input type="text"/></div>
+                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+              </div>
+            </th>
+            <th>
+              <div>Actions</div>
+              <div class="filter">
+                <button>Filter</button>
+              </div>
+            </th>
           </thead>
           <tbody>
             <tr id="copyme">
+              <td><input type="checkbox"/></td>
               <td>%id</td>
               <td>Bottle of milk</td>
               <td>MLK1LA</td>
@@ -102,6 +164,10 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="paging">
+        <div class="pages">Page: <button>1</button> <button>2</button> ... <button>50</button> <button class="selected">51</button> <button>52</button> ... <button>134</button> <button>135</button></div>
+        <div class="items">Items per page: <select><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
       </div>
     </div>
     <div id="right_text">
