@@ -374,6 +374,10 @@ body {
 #center_text .table th .filter .icon {
   margin-top: 6px;
 }
+#center_text .table th .filter .icon i:hover {
+  color: var(--color3);
+  cursor: pointer;
+}
 #center_text .table th .filter .input {
   flex-grow: 1;
 }
