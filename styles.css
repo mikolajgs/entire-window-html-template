@@ -146,6 +146,10 @@ body {
   padding-bottom: calc(var(--font-size2) / 2);
 }
 
+#left_icons .top a, #left_icons .top a:visited {
+  color: var(--color7);
+}
+
 #left_icons .top i {
   width: calc(var(--left-icons-width) - 2px);
   font-size: var(--font-size5);
