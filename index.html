@@ -30,9 +30,21 @@
       p.appendChild(newDiv);
     }
   }
+  function add_layers() {
+    var c = document.getElementById("copyme3");
+    var p = document.getElementById("copyme3").parentElement;
+
+    var h = c.innerHTML;
+
+    for (var i=0; i<16; i++) {
+      var newDiv = document.createElement("div");
+      newDiv.innerHTML = h.replace("%id", (16-i).toString());
+      p.appendChild(newDiv);
+    }
+  }
 </script>
 </head>
-<body onload="add_table_trs(); add_photo_tns();">
+<body onload="add_table_trs(); add_photo_tns(); add_layers();">
   <div id="layout">
     <div id="left_icons">
       <div class="top">
@@ -213,6 +225,28 @@
         Click on the struct name to see items.
       </div>
       <div class="header"><i class="fa-solid fa-layer-group" alt="Layers"></i>Layers</div>
+      <div class="layers">
+        <div id="copyme3">
+          <input type="checkbox"/>
+          <i class="fa-solid fa-paintbrush type" alt="Pixel"></i>
+          <input type="text" value="Layer %id"/>
+          <button><i class="fa-solid fa-lock" alt="Lock"></i></button>
+          <button><i class="fa-solid fa-eye-slash" alt="Visible"></i></button>
+          <button><i class="fa-solid fa-arrow-up" alt="Move up"></i></button>
+          <button><i class="fa-solid fa-arrow-down" alt="Move down"></i></button>
+          <button><i class="fa-solid fa-trash" alt="Delete"></i></button>
+        </div>
+        <div class="selected">
+          <input type="checkbox"/>
+          <i class="fa-solid fa-paintbrush type" alt="Pixel"></i>
+          <input type="text" value="My layer"/>
+          <button class="selected"><i class="fa-solid fa-lock" alt="Lock"></i></button>
+          <button><i class="fa-solid fa-eye-slash" alt="Visible"></i></button>
+          <button><i class="fa-solid fa-arrow-up" alt="Move up"></i></button>
+          <button><i class="fa-solid fa-arrow-down" alt="Move down"></i></button>
+          <button><i class="fa-solid fa-trash" alt="Delete"></i></button>
+        </div>
+      </div>
     </div>
     <div id="right_icons">
     </div>
