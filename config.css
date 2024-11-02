@@ -1,9 +1,28 @@
 :root {
   --font-family: Arial, Helvetica, sans-serif;
 
-  --bottom-zindex: 500;
-  --bottom-message-zindex: 501;
-  --top-menu-zindex: 502;
+  --font-size1: 12px;
+  --font-size11: 13px;
+  --font-size2: 14px;
+  --font-size4: 18px;
+  --font-size5: 20px;
+
+  --color1: #222336;
+  --color2: #35576e;
+  --color3: #fefefe;
+  --color4: #c97539;
+  --color5: #433337;
+  --color6: #ffb684;
+  --color7: #9d9eb7;
+  --color9: #2a2c3f;
+  --color10: #3f4455;
+  --color11: #fafafa;
+
+  --line-height4: 18px;
+
+  --zindex-bottom: 500;
+  --zindex-bottom-message: 501;
+  --zindex-top-menu: 502;
 
   --bottom-height: 25px;
   --top-height: 30px;
@@ -12,54 +31,6 @@
   --right-text-width: 290px;
   --right-icons-width: 50px;
 
-  --color1: #222336;
-
-  --color2: #35576e;
-  --color3: #fefefe;
-  --color4: #c97539;
-  --color5: #433337;
-  --color6: #ffb684;
-
-  --color7: #9d9eb7;
-
-  --color9: #2a2c3f;
-  --color10: #3f4455;
-  --color11: #fafafa;
-
-  --bottom-font-size: 12px;
-  --bottom-left-flex-grow: 6;
-  --bottom-center-flex-grow: 20;
-  --bottom-right-flex-grow: 4;
-  --bottom-status-flex-grow: 1;
-
-  --bottom-message-font-size: 14px;
-  --bottom-message-line-height: 18px;
-  --bottom-message-padding: 20px;
-  --bottom-message-distance: 5px;
   --bottom-message-width: 550px;
   --bottom-message-height: 100px;
-  --bottom-message-left-text-align: center;
-  --bottom-message-left-flex: 1;
-  --bottom-message-right-flex: 6;
-
-  --bottom-message-icon-font-size: 34px;
-  --bottom-message-icon-margin-top: 8px;
-
-  --left-icons-top-text-align: center;
-  --left-icons-font-size: 20px;
-  --left-icons-header-font-size: 12px;
-
-  --left-text-items-margin: 15px;
-  --left-text-info-font-size: 13px;
-  --left-text-info-padding: 12px;
-  --left-text-info-text-align: left;
-  --left-text-header-font-size: 14px;
-  --left-text-header-text-align: left;
-
-  --left-text-ul-font-size: 14px;
-  --left-text-ul-margin: 0;
-
-  --center-text-table-font-size: 18px;
-
-  --top-menu-font-size: 14px;
 }

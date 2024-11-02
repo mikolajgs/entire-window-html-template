@@ -25,8 +25,8 @@ body {
   left: 0;
   width: 100%;
   height: var(--bottom-height);
-  z-index: var(--bottom-zindex);
-  font-size: var(--bottom-font-size);
+  z-index: var(--zindex-bottom);
+  font-size: var(--font-size1);
   font-family: var(--font-family);
   background: var(--color2);
 }
@@ -43,22 +43,22 @@ body {
 }
 
 #bottom .text .left {
-  flex-grow: var(--bottom-left-flex-grow);
+  flex-grow: 6;
   color: var(--color3);
 }
 
 #bottom .text .center {
-  flex-grow: var(--bottom-center-flex-grow);
+  flex-grow: 20;
   color: var(--color3);
 }
 
 #bottom .text .right {
-  flex-grow: var(--bottom-right-flex-grow);
+  flex-grow: 4;
   color: var(--color3);
 }
 
 #bottom .text .status {
-  flex-grow: var(--bottom-status-flex-grow);
+  flex-grow: 1;
   background: var(--color4);
   color: var(--color3);
 }
@@ -67,15 +67,15 @@ body {
 #bottom_message {
   display: block;
   position: fixed;
-  bottom: calc(var(--bottom-height) + var(--bottom-message-distance));
-  right: var(--bottom-message-distance);
+  bottom: calc(var(--bottom-height) + 5px);
+  right: 5px;
   border: solid 1px var(--color4);
-  font-size: var(--bottom-message-font-size);
-  line-height: var(--bottom-message-line-height);
+  font-size: var(--font-size2);
+  line-height: var(--line-height4);
   font-family: var(--font-family);
   width: var(--bottom-message-width);
   height: var(--bottom-message-height);
-  z-index: var(--bottom-message-zindex);
+  z-index: var(--zindex-bottom-message);
   color: var(--color6);
   background: var(--color5);
 }
@@ -99,20 +99,19 @@ body {
 }
 
 #bottom_message .left {
-  padding: var(--bottom-message-padding) 0 0 var(--bottom-message-padding);
-  text-align: var(--bottom-message-left-text-align);
-  flex: var(--bottom-message-left-flex);
-
+  padding: 20px 0 0 20px;
+  text-align: center;
+  flex: 1;
 }
 
 #bottom_message .left i {
-  font-size: var(--bottom-message-icon-font-size);
-  margin-top: var(--bottom-message-icon-margin-top);
+  font-size: 34px;
+  margin-top: 8px;
 }
 
 #bottom_message .right {
-  padding: var(--bottom-message-padding);
-  flex: var(--bottom-message-right-flex);
+  padding: 20px;
+  flex: 6;
 }
 
 /* left icons */
@@ -130,35 +129,35 @@ body {
 #left_icons .top {
   margin-top: 1px;
   padding: 0;
-  text-align: var(--left-icons-top-text-align);
+  text-align: center;
   color: var(--color7);
 }
 
 #left_icons .top .header {
   text-align: center;
-  font-size: var(--left-icons-header-font-size);
+  font-size: var(--font-size1);
   border: solid 1px var(--color1);
   background-image: linear-gradient(var(--color1), var(--color9));
-  line-height: var(--left-text-header-font-size);
-  padding-top: calc(var(--left-text-header-font-size) / 2);
-  padding-bottom: calc(var(--left-text-header-font-size) / 2);
+  line-height: var(--font-size2);
+  padding-top: calc(var(--font-size2) / 2);
+  padding-bottom: calc(var(--font-size2) / 2);
 }
 
 #left_icons .top i {
   width: calc(var(--left-icons-width) - 2px);
-  font-size: var(--left-icons-font-size);
+  font-size: var(--font-size5);
   border: solid 1px var(--color1);
-  padding-top: calc((var(--left-icons-width) - 2px - var(--left-icons-font-size))/2);
-  padding-bottom: calc((var(--left-icons-width) - 2px - var(--left-icons-font-size))/2);
+  padding-top: calc((var(--left-icons-width) - 2px - var(--font-size5))/2);
+  padding-bottom: calc((var(--left-icons-width) - 2px - var(--font-size5))/2);
   display: inline-block;
 }
 
 #left_icons .top i.pressed {
   width: calc(var(--left-icons-width) - 2px);
-  font-size: var(--left-icons-font-size);
+  font-size: var(--font-size5);
   border: solid 1px var(--color7);
-  padding-top: calc((var(--left-icons-width) - 2px - var(--left-icons-font-size))/2);
-  padding-bottom: calc((var(--left-icons-width) - 2px - var(--left-icons-font-size))/2);
+  padding-top: calc((var(--left-icons-width) - 2px - var(--font-size5))/2);
+  padding-bottom: calc((var(--left-icons-width) - 2px - var(--font-size5))/2);
   display: inline-block;
   color: var(--color3);
   background: var(--color7);
@@ -197,15 +196,15 @@ body {
 #left_text .header,
 #right_text .header,
 #center_text .header {
-  text-align: var(--left-text-header-text-align);
-  font-size: var(--left-text-header-font-size);
-  line-height: var(--left-text-header-font-size);
+  text-align: left;
+  font-size: var(--font-size2);
+  line-height: var(--font-size2);
   border: solid 1px var(--color1);
   background-image: linear-gradient(var(--color1), var(--color9));
   margin-top: 1px;
-  padding-top: calc(var(--left-text-header-font-size) / 2);
-  padding-left: var(--left-text-info-padding);
-  padding-bottom: calc(var(--left-text-header-font-size) / 2);
+  padding-top: calc(var(--font-size2) / 2);
+  padding-left: 12px;
+  padding-bottom: calc(var(--font-size2) / 2);
   color: var(--color3);
 }
 
@@ -224,23 +223,20 @@ body {
 #left_text .info,
 #right_text .info {
   font-family: var(--font-family);
-  line-height: var(--left-text-info-font-size);
-  font-size: var(--left-text-info-font-size);
-  padding: var(--left-text-info-padding);
-  text-align: var(--left-text-info-text-align);
-  margin: var(--left-text-items-margin);
+  line-height: var(--font-size11);
+  font-size: var(--font-size11);
+  padding: 12px;
+  text-align: left;
+  margin: 15px;
   color: var(--color7);
   border-left: dotted 1px var(--color7);
 }
 
 #left_text ul {
-  margin-top: var(--left-text-ul-margin);
-  margin-right: var(--left-text-ul-margin);
-  margin-left: var(--left-text-ul-margin);
-  margin-bottom: 0;
+  margin: 0;
   list-style-type: none;
-  padding: var(--left-text-info-padding);
-  font-size: var(--left-text-ul-font-size);
+  padding: 12px;
+  font-size: var(--font-size2);
   font-family: var(--font-family);
 }
 
@@ -278,10 +274,10 @@ body {
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
-  padding-top: calc(var(--left-text-header-font-size) / 2);
-  padding-left: var(--left-text-info-padding);
-  padding-right: var(--left-text-info-padding);
-  padding-bottom: calc(var(--left-text-header-font-size) / 2);
+  padding-top: calc(var(--font-size2) / 2);
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: calc(var(--font-size2) / 2);
 }
 
 #center_text .paging button, #center_text .paging select, #center_text .filter button, #center_text .selection button {
@@ -356,7 +352,7 @@ body {
 #center_text .table table {
   width: 100%;
   color: var(--color7);
-  font-size: var(--center-text-table-font-size);
+  font-size: var(--font-size4);
 }
 
 #center_text .table th {
@@ -386,7 +382,7 @@ body {
   border: dashed 1px var(--color7);
   background-image: linear-gradient(var(--color1), var(--color2));
   color: var(--color3);
-  font-size: var(--center-text-table-font-size);
+  font-size: var(--font-size4);
 }
 
 #center_text .table td {
@@ -452,8 +448,8 @@ body {
   left: 0;
   width: 100%;
   background: var(--color2);
-  z-index: var(--top-menu-zindex);
-  font-size: var(--top-menu-font-size);
+  z-index: var(--zindex-top-menu);
+  font-size: var(--font-size2);
   font-family: var(--font-family);
   color: var(--color3);
   height: var(--top-height);
@@ -462,7 +458,7 @@ body {
 
 #top_menu button {
   display: inline-block;
-  font-size: var(--top-menu-font-size);
+  font-size: var(--font-size2);
   text-align: center;
   padding: 7px;
   text-decoration: none;
