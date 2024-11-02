@@ -33,4 +33,7 @@
 
   --bottom-message-width: 550px;
   --bottom-message-height: 100px;
+
+  --thumbnail-width: 200px;
+  --thumbnail-height: 200px;
 }

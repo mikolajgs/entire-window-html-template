@@ -17,9 +17,22 @@
       p.appendChild(newTr);
     }
   }
+  function add_photo_tns() {
+    var c = document.getElementById("copyme2");
+    var p = document.getElementById("copyme2").parentElement;
+
+    var h = c.innerHTML;
+
+    for (var i=0; i<99; i++) {
+      var newDiv = document.createElement("div");
+      newDiv.className = "tn";
+      newDiv.innerHTML = h;
+      p.appendChild(newDiv);
+    }
+  }
 </script>
 </head>
-<body onload="add_table_trs();">
+<body onload="add_table_trs(); add_photo_tns();">
   <div id="layout">
     <div id="left_icons">
       <div class="top">
@@ -177,6 +190,21 @@
       <div class="paging">
         <div class="pages">Page: <button>1</button> <button>2</button> ... <button>50</button> <button class="selected">51</button> <button>52</button> ... <button>134</button> <button>135</button></div>
         <div class="items">Items per page: <select><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+      </div>
+      <div class="thumbnails">
+        <div class="tn" id="copyme2">
+          <div class="tn_icons_left">
+            <input type="checkbox"/>
+          </div>
+          <div class="tn_icons_right">
+            <i class="fa-solid fa-edit" alt="Edit"></i>
+            <i class="fa-solid fa-trash" alt="Remove"></i>
+          </div>
+          <div class="tn_name">
+            filename.jpg
+          </div>
+          <img src="img/sample.jpg"/>
+        </div>
       </div>
     </div>
     <div id="right_text">

@@ -119,6 +119,7 @@ body {
   display: block;
   height: 100%;
   width: var(--left-icons-width);
+  min-width: var(--left-icons-width);
   background: var(--color9);
   border-right: solid 1px var(--color10);
   flex-flow: column;
@@ -183,6 +184,7 @@ body {
 #left_text {
   display: block;
   width: var(--left-text-width);
+  min-width: var(--left-text-width);
   border-right: solid 1px var(--color10);
   height: 100%;
   overflow-y: auto;
@@ -349,6 +351,67 @@ body {
   color: var(--color3);
 }
 
+#center_text .thumbnails {
+  margin: 10px;
+  justify-content: space-between;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#center_text .thumbnails .tn {
+  width: var(--thumbnail-width);
+  height: var(--thumbnail-height);
+  border: dashed 1px var(--color7);
+  background-image: linear-gradient(var(--color1), var(--color2));
+  position: relative;
+  margin: 0;
+  gap: 10px;
+}
+
+#center_text .thumbnails .tn:hover {
+  border: solid 1px var(--color3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+#center_text .thumbnails .tn .tn_icons_left {
+  padding: 5px;
+  color: var(--color7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color2);
+}
+#center_text .thumbnails .tn .tn_icons_right {
+  padding: 5px;
+  color: var(--color7);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color2);
+}
+
+#center_text .thumbnails .tn .tn_icons_left i:hover, #center_text .thumbnails .tn .tn_icons_right i:hover {
+  color: var(--color3);
+  cursor: pointer;
+}
+
+#center_text .thumbnails .tn .tn_name {
+  padding: 5px;
+  color: var(--color3);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: var(--color2);
+}
+
+#center_text .thumbnails .tn img {
+  width: var(--thumbnail-width);
+  height: var(--thumbnail-height);
+}
+
 #center_text .table table {
   width: 100%;
   color: var(--color7);
@@ -408,6 +471,7 @@ body {
 #right_text {
   display: block;
   width: var(--right-text-width);
+  min-width: var(--right-text-width);
   border-left: solid 1px var(--color10);
   height: 100%;
   overflow-y: auto;
@@ -422,6 +486,7 @@ body {
   display: block;
   height: 100%;
   width: var(--right-icons-width);
+  min-width: var(--right-icons-width);
   border-left: solid 1px var(--color10);
   padding-top: var(--top-height);
   background: var(--color9);
