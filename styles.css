@@ -543,6 +543,10 @@ body {
   border: solid 1px var(--color3);
 }
 
+#right_text .layers .actions button {
+  width: 80px;
+}
+
 /* right icons */
 #right_icons {
   display: block;
