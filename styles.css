@@ -256,6 +256,10 @@ body {
   color: var(--color3);
 }
 
+#left_text ul li a {
+  cursor: pointer;
+}
+
 /* center */
 #center_text {
   display: block;
