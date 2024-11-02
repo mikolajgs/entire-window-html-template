@@ -1,3 +1,5 @@
+/* v0.1 */
+
 body {
   background: var(--color1);
   margin: 0;
@@ -464,6 +466,49 @@ body {
 
 #center_text .table td i:hover {
   color: var(--color3);
+  cursor: pointer;
+}
+
+#center_text .form {
+  margin: 10px;
+  color: var(--color7);
+}
+
+#center_text .form p {
+  margin-bottom: 3px;
+}
+
+#center_text .form p label {
+  width: 120px;
+  display: inline-block;
+}
+
+#center_text .form p input[type=text] {
+  border: dashed 1px var(--color7);
+  background-image: linear-gradient(var(--color1), var(--color2));
+  color: var(--color3);
+  font-size: var(--font-size4);
+  width: 400px;
+}
+#center_text .form p textarea {
+  border: dashed 1px var(--color7);
+  background-image: linear-gradient(var(--color1), var(--color2));
+  color: var(--color3);
+  font-size: var(--font-size4);
+  width: 400px;
+  height: 200px;
+}
+#center_text .form p button {
+  font-size: 16px;
+  border: solid 1px var(--color7);
+  color: var(--color11);
+  background: var(--color2);
+  padding: 4px;
+  border-radius: 3px;
+}
+#center_text .form p button:hover {
+  color: var(--color2);
+  background: var(--color11);
   cursor: pointer;
 }
 
