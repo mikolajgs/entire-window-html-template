@@ -564,28 +564,28 @@ body {
   border: solid 1px var(--color3);
 }
 
-#right_text form.item {
+#right_text > form {
   margin: 10px;
   color: var(--color7);
 }
 
-#right_text form.item p {
+#right_text > form p {
   margin-bottom: 3px;
 }
 
-#right_text form.item p label {
+#right_text > form p label {
   width: 100px;
   display: block;
 }
 
-#right_text form.item p input[type=text], #right_text form.item p select {
+#right_text > form p input[type=text], #right_text > form p select {
   border: dashed 1px var(--color7);
   background-image: linear-gradient(var(--color1), var(--color2));
   color: var(--color3);
   font-size: var(--font-size2);
   width: calc(var(--right-text-width) - 20px);
 }
-#right_text form.item p textarea {
+#right_text > form p textarea {
   border: dashed 1px var(--color7);
   background-image: linear-gradient(var(--color1), var(--color2));
   color: var(--color3);
@@ -593,7 +593,7 @@ body {
   width: calc(var(--right-text-width) - 20px);
   height: 100px;
 }
-#right_text form.item p button {
+#right_text > form p button {
   font-size: 16px;
   border: solid 1px var(--color7);
   color: var(--color11);
@@ -601,7 +601,7 @@ body {
   padding: 4px;
   border-radius: 3px;
 }
-#right_text form.item p button:hover {
+#right_text > form p button:hover {
   color: var(--color2);
   background: var(--color11);
   cursor: pointer;
