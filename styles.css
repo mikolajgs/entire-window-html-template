@@ -488,36 +488,36 @@ body {
   cursor: pointer;
 }
 
-#center_text .form {
+#right_text .form {
   margin: 10px;
   color: var(--color7);
 }
 
-#center_text .form p {
+#right_text .form p {
   margin-bottom: 3px;
 }
 
-#center_text .form p label {
-  width: 120px;
-  display: inline-block;
+#right_text .form p label {
+  width: 100px;
+  display: block;
 }
 
-#center_text .form p input[type=text] {
+#right_text .form p input[type=text], #right_text .form p select {
   border: dashed 1px var(--color7);
   background-image: linear-gradient(var(--color1), var(--color2));
   color: var(--color3);
-  font-size: var(--font-size4);
-  width: 400px;
+  font-size: var(--font-size2);
+  width: calc(var(--right-text-width) - 20px);
 }
-#center_text .form p textarea {
+#right_text .form p textarea {
   border: dashed 1px var(--color7);
   background-image: linear-gradient(var(--color1), var(--color2));
   color: var(--color3);
-  font-size: var(--font-size4);
-  width: 400px;
-  height: 200px;
+  font-size: var(--font-size2);
+  width: calc(var(--right-text-width) - 20px);
+  height: 100px;
 }
-#center_text .form p button {
+#right_text .form p button {
   font-size: 16px;
   border: solid 1px var(--color7);
   color: var(--color11);
@@ -525,7 +525,7 @@ body {
   padding: 4px;
   border-radius: 3px;
 }
-#center_text .form p button:hover {
+#right_text .form p button:hover {
   color: var(--color2);
   background: var(--color11);
   cursor: pointer;
