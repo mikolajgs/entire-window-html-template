@@ -488,49 +488,6 @@ body {
   cursor: pointer;
 }
 
-#right_text form {
-  margin: 10px;
-  color: var(--color7);
-}
-
-#right_text form p {
-  margin-bottom: 3px;
-}
-
-#right_text form p label {
-  width: 100px;
-  display: block;
-}
-
-#right_text form p input[type=text], #right_text form p select {
-  border: dashed 1px var(--color7);
-  background-image: linear-gradient(var(--color1), var(--color2));
-  color: var(--color3);
-  font-size: var(--font-size2);
-  width: calc(var(--right-text-width) - 20px);
-}
-#right_text form p textarea {
-  border: dashed 1px var(--color7);
-  background-image: linear-gradient(var(--color1), var(--color2));
-  color: var(--color3);
-  font-size: var(--font-size2);
-  width: calc(var(--right-text-width) - 20px);
-  height: 100px;
-}
-#right_text form p button {
-  font-size: 16px;
-  border: solid 1px var(--color7);
-  color: var(--color11);
-  background: var(--color2);
-  padding: 4px;
-  border-radius: 3px;
-}
-#right_text form p button:hover {
-  color: var(--color2);
-  background: var(--color11);
-  cursor: pointer;
-}
-
 /* right text */
 #right_text {
   display: block;
@@ -605,6 +562,49 @@ body {
   color: var(--color3);
   cursor: pointer;
   border: solid 1px var(--color3);
+}
+
+#right_text form {
+  margin: 10px;
+  color: var(--color7);
+}
+
+#right_text form p {
+  margin-bottom: 3px;
+}
+
+#right_text form p label {
+  width: 100px;
+  display: block;
+}
+
+#right_text form p input[type=text], #right_text form p select {
+  border: dashed 1px var(--color7);
+  background-image: linear-gradient(var(--color1), var(--color2));
+  color: var(--color3);
+  font-size: var(--font-size2);
+  width: calc(var(--right-text-width) - 20px);
+}
+#right_text form p textarea {
+  border: dashed 1px var(--color7);
+  background-image: linear-gradient(var(--color1), var(--color2));
+  color: var(--color3);
+  font-size: var(--font-size2);
+  width: calc(var(--right-text-width) - 20px);
+  height: 100px;
+}
+#right_text form p button {
+  font-size: 16px;
+  border: solid 1px var(--color7);
+  color: var(--color11);
+  background: var(--color2);
+  padding: 4px;
+  border-radius: 3px;
+}
+#right_text form p button:hover {
+  color: var(--color2);
+  background: var(--color11);
+  cursor: pointer;
 }
 
 #right_text .layers .actions button {
