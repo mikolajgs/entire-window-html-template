@@ -1,10 +1,8 @@
 <html>
 <head>
-<title>app_template__ v0.1</title>
+<title>app_template__ v0.2</title>
 <link rel="stylesheet" href="config.css">
 <link rel="stylesheet" href="styles.css">
-<link href="fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet">
-<link href="fontawesome-free-6.6.0-web/css/solid.css" rel="stylesheet">
 <script>
   function add_table_trs() {
     var c = document.getElementById("copyme");
@@ -49,63 +47,63 @@
     <div id="left_icons">
       <div class="top">
         <div class="header">Tools</div>
-        <i class="fa-solid fa-arrow-pointer" alt="Select"></i>
-        <i class="fa-solid fa-up-down-left-right pressed" alt="Move"></i>
-        <i class="fa-solid fa-trash" alt="Delete"></i>
-        <i class="fa-solid fa-rotate" alt="Modify"></i>
-        <i class="fa-solid fa-magnifying-glass" alt="Zoom"></i>
-        <i class="fa-solid fa-pencil" alt="Pencil"></i>
-        <i class="fa-solid fa-minus" alt="Line"></i>
-        <i class="fa-solid fa-shapes" alt="Shape"></i>
-        <i class="fa-solid fa-fill" alt="Fill"></i>
-        <i class="fa-solid fa-eraser" alt="Eraser"></i>
-        <i class="fa-solid fa-eye-dropper" alt="Color picker"></i>
-        <i class="fa-solid fa-wand-magic-sparkles" alt="Magic wand"></i>
+        <div class="icon">select</div>
+        <div class="icon">move</div>
+        <div class="icon">delete</div>
+        <div class="icon">modify</div>
+        <div class="icon">zoom</div>
+        <div class="icon">pencil</div>
+        <div class="icon">line</div>
+        <div class="icon">shape</div>
+        <div class="icon">fill</div>
+        <div class="icon">eraser</div>
+        <div class="icon">color picker</div>
+        <div class="icon">magic wand</div>
         <div class="header">Colors</div>
-        <i style="background-color: #ff204e;" class="" alt="Foreground color">&nbsp;</i>
-        <i style="background-color: #5d0e41;" class="" alt="Background color">&nbsp;</i>
+        <div class="icon" style="background-color: #ff204e;">&nbsp;</div>
+        <div class="icon" style="background-color: #5d0e41;">&nbsp;</div>
         <div class="header">Pallette</div>
-        <i style="background-color: #b4d6cd;"></i>
-        <i style="background-color: #ffda76;"></i>
-        <i style="background-color: #ff8c9e;"></i>
-        <i style="background-color: #ff4e88;"></i>
-        <i style="background-color: #a02334;"></i>
-        <i style="background-color: #ffad60;"></i>
-        <i style="background-color: #ffeead;"></i>
-        <i style="background-color: #96ceb6;"></i>
+        <div class="icon" style="background-color: #b4d6cd;"></div>
+        <div class="icon" style="background-color: #ffda76;"></div>
+        <div class="icon" style="background-color: #ff8c9e;"></div>
+        <div class="icon" style="background-color: #ff4e88;"></div>
+        <div class="icon" style="background-color: #a02334;"></div>
+        <div class="icon" style="background-color: #ffad60;"></div>
+        <div class="icon" style="background-color: #ffeead;"></div>
+        <div class="icon" style="background-color: #96ceb6;"></div>
       </div>
       <div class="bottom">
       </div>
     </div>
     <div id="left_text">
-      <div class="header"><i class="fa-solid fa-list" alt="Structs"></i>Structs</div>
+      <div class="header">Structs</div>
       <div class="info">
         Click on the struct name to see items.
       </div>
       <ul style="padding-top:0">
-        <li><i class="fa-solid fa-table-list"></i> User</li>
-        <li><i class="fa-solid fa-table-list"></i> UserGroup</li>
-        <li><i class="fa-solid fa-table-list"></i> Product</li>
-        <li><i class="fa-solid fa-table-list"></i> ProductGroup</li>
-        <li><i class="fa-solid fa-table-list"></i> Article</li>
-        <li><i class="fa-solid fa-table-list"></i> Review</li>
+        <li>&raquo; User</li>
+        <li>&raquo; UserGroup</li>
+        <li>&raquo; Product</li>
+        <li>&raquo; ProductGroup</li>
+        <li>&raquo; Article</li>
+        <li>&raquo; Review</li>
       </ul>
-      <div class="header"><i class="fa-solid fa-table-columns" alt="Views"></i>Views</div>
+      <div class="header">Views</div>
       <div class="info">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </div>
-      <div class="header"><i class="fa-solid fa-images" alt="Galleries"></i>Galleries</div>
+      <div class="header">Galleries</div>
       <div class="info">
         Click on the gallery name so see its contents.
       </div>
       <ul style="padding-top:0">
-        <li><i class="fa-solid fa-folder"></i> 2024-02-11 Venice</li>
-        <li><i class="fa-solid fa-folder"></i> 2024-03-00 Various</li>
-        <li><i class="fa-solid fa-folder"></i> 2024-02-16 Ostrava</li>
+        <li>&raquo; 2024-02-11 Venice</li>
+        <li>&raquo; 2024-03-00 Various</li>
+        <li>&raquo; 2024-02-16 Ostrava</li>
       </ul>
     </div>
     <div id="center_text">
-      <div class="header glow"><i class="fa-solid fa-user-group" alt="Structs"></i>UserGroup struct items</div>
+      <div class="header">&raquo; UserGroup struct items</div>
       <div class="paging">
         <div class="pages">Page: <button>1</button> <button>2</button> ... <button>50</button> <button class="selected">51</button> <button>52</button> ... <button>134</button> <button>135</button></div>
         <div class="items">Items per page: <select><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
@@ -128,49 +126,49 @@
               <div>Name</div>
               <div class="filter">
                 <div class="input"><input type="text"/></div>
-                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+                <div class="icon">&#10005;</div>
               </div>
             </th>
             <th>
               <div>Code</div>
               <div class="filter">
                 <div class="input"><input type="text"/></div>
-                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+                <div class="icon">&#10005;</div>
               </div>
             </th>
             <th>
               <div>Group</div>
               <div class="filter">
                 <div class="input"><input type="text"/></div>
-                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+                <div class="icon">&#10005;</div>
               </div>
             </th>
             <th>
               <div>Price</div>
               <div class="filter">
                 <div class="input"><input type="text"/></div>
-                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+                <div class="icon">&#10005;</div>
               </div>
             </th>
             <th>
               <div>Created</div>
               <div class="filter">
                 <div class="input"><input type="text"/></div>
-                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+                <div class="icon">&#10005;</div>
               </div>
             </th>
             <th>
               <div>Created By</div>
               <div class="filter">
                 <div class="input"><input type="text"/></div>
-                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+                <div class="icon">&#10005;</div>
               </div>
             </th>
             <th>
               <div>Active</div>
               <div class="filter">
                 <div class="input"><input type="text"/></div>
-                <div class="icon"><i class="fa-solid fa-delete-left" alt="Filter"></i></div>
+                <div class="icon">&#10005;</div>
               </div>
             </th>
             <th>
@@ -192,8 +190,8 @@
               <td>Jane Doe</td>
               <td>true</td>
               <td style="text-align: center">
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash"></i>
+                <a>&#9998;</a>
+                <a>&#10005;</a>
               </td>
             </tr>
           </tbody>
@@ -209,8 +207,8 @@
             <input type="checkbox"/>
           </div>
           <div class="tn_icons_right">
-            <i class="fa-solid fa-edit" alt="Edit"></i>
-            <i class="fa-solid fa-trash" alt="Remove"></i>
+            <a>&#9998;</a>
+            <a>&#10005;</a>
           </div>
           <div class="tn_name">
             filename.jpg
@@ -220,42 +218,42 @@
       </div>
     </div>
     <div id="right_text">
-      <div class="header"><i class="fa-solid fa-image" alt="Image properties"></i>Image properties</div>
+      <div class="header">&raquo; Image properties</div>
       <div class="info">
         Click on the struct name to see items.
       </div>
-      <div class="header"><i class="fa-solid fa-layer-group" alt="Layers"></i>Layers</div>
+      <div class="header">&raquo; Layers</div>
       <div class="layers">
         <div id="copyme3">
           <input type="checkbox"/>
-          <i class="fa-solid fa-paintbrush type" alt="Pixel"></i>
+          P
           <input type="text" value="Layer %id"/>
-          <button><i class="fa-solid fa-lock" alt="Lock"></i></button>
-          <button><i class="fa-solid fa-eye-slash" alt="Visible"></i></button>
-          <button><i class="fa-solid fa-arrow-up" alt="Move up"></i></button>
-          <button><i class="fa-solid fa-arrow-down" alt="Move down"></i></button>
-          <button><i class="fa-solid fa-trash" alt="Delete"></i></button>
+          <button>L</button>
+          <button>V</button>
+          <button>U</button>
+          <button>D</button>
+          <button>X</button>
         </div>
         <div class="selected">
           <input type="checkbox"/>
-          <i class="fa-solid fa-paintbrush type" alt="Pixel"></i>
+          P
           <input type="text" value="My layer"/>
-          <button class="selected"><i class="fa-solid fa-lock" alt="Lock"></i></button>
-          <button><i class="fa-solid fa-eye-slash" alt="Visible"></i></button>
-          <button><i class="fa-solid fa-arrow-up" alt="Move up"></i></button>
-          <button><i class="fa-solid fa-arrow-down" alt="Move down"></i></button>
-          <button><i class="fa-solid fa-trash" alt="Delete"></i></button>
+          <button class="selected">L</button>
+          <button>V</button>
+          <button>U</button>
+          <button>D</button>
+          <button>X</button>
         </div>
       </div>
       <div class="layers">
         <div class="actions">
           <input type="checkbox"/>
-          <button><i class="fa-solid fa-lock" alt="Lock"></i> Toggle lock</button>
-          <button><i class="fa-solid fa-eye-slash" alt="Visible"></i> Toggle visibility</button>
-          <button><i class="fa-solid fa-trash" alt="Delete"></i> Delete</button>
+          <button>Toggle lock</button>
+          <button>Toggle visibility</button>
+          <button>Delete</button>
         </div>
         <div class="actions">
-          <button><i class="fa-solid fa-plus" alt="Add"></i> Add layer</button>
+          <button>&#43; Add layer</button>
         </div>
       </div>
 
@@ -304,10 +302,9 @@
   </div>
   <div id="bottom_message">
     <div class="text">
-      <div class="left"><i class="fa-solid fa-triangle-exclamation" alt="Warning"></i></div>
+      <div class="left">Warning!</div>
       <div class="right">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>
         <a href="https://forthcoming.systems">more</a>
       </div>
     </div>
