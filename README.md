@@ -9,6 +9,4 @@ While the current design is basic and could be further refined in terms of aesth
 
 To facilitate easy adjustments to widths and font sizes, layout configuration is centralised in the config.css file.
 
-Icons are taken from [Font Awesome](https://fontawesome.com/).
-
 ----
