@@ -200,24 +200,20 @@ body {
 #right_text .header,
 #center_text .header {
   text-align: left;
-  margin-top: 1px;
-  padding-top: calc(var(--font-size-2) / 2);
-  padding-left: 12px;
+  margin-top: calc(var(--font-size-2) / 2);
+  margin-left: 12px;
+  margin-bottom: calc(var(--font-size-2) / 2);
+  margin-right: 12px;
   padding-bottom: calc(var(--font-size-2) / 2);
   color: var(--color-5);
   font-weight: bold;
+  font-size: var(--font-size-3);
+  border-bottom: solid 1px var(--color-3);
 }
 
 #center_text .glow {
   text-shadow: 0 0 2px #000000;
   letter-spacing: 1px;
-}
-
-#left_text .header i,
-#right_text .header i,
-#center_text .header i {
-  margin-left: 6px;
-  margin-right: 8px;
 }
 
 #left_text .info,
@@ -246,6 +242,7 @@ body {
 
 #left_text ul li a {
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* center */
@@ -265,16 +262,19 @@ body {
   color: var(--color-3);
 }
 
-#center_text .title i {
-  margin-right: 10px;
-}
-
 #center_text .paging,
 #center_text .filter,
 #center_text .selection {
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
+  padding-top: calc(var(--font-size-2) / 2);
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: calc(var(--font-size-2) / 2);
+}
+
+#center_text .table {
   padding-top: calc(var(--font-size-2) / 2);
   padding-left: 12px;
   padding-right: 12px;
@@ -420,10 +420,8 @@ body {
 #center_text .table table {
   width: 100%;
   color: var(--color-3);
-}
-
-#center_text .table th i {
-  color: var(--color-3);
+  border: 0;
+  border-collapse: collapse;
 }
 
 #center_text .table th div.icon.selected {
@@ -436,10 +434,20 @@ body {
 }
 
 #center_text .table th {
-  border: solid 1px var(--color-2);
+  border-right: solid 1px var(--color-2);
   color: var(--color-1);
   font-weight: normal;
   background: var(--color-3);
+  border-collapse: collapse;
+}
+
+#center_text .table th:first-of-type {
+  border-top-left-radius: 6px;
+}
+
+#center_text .table th:last-of-type {
+  border-top-right-radius: 6px;
+  border-right: 0;
 }
 
 #center_text .table th .filter {
@@ -539,13 +547,14 @@ body {
   border: solid 1px var(--color-3);
   background: var(--color-2);
   color: var(--color-3);
+  border-radius: 4px;
 }
 
 #right_text .layers div button {
   border: solid 1px var(--color-3);
   color: var(--color-1);
   background: var(--color-3);
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 3px;
   width: 24px;
 }
@@ -594,6 +603,7 @@ body {
   background: var(--color-2);
   color: var(--color-5);
   width: calc(var(--right-text-width) - 20px);
+  border-radius: 4px;
 }
 
 #right_text form p textarea {
@@ -602,6 +612,7 @@ body {
   color: var(--color-5);
   width: calc(var(--right-text-width) - 20px);
   height: 100px;
+  border-radius: 4px;
 }
 
 #right_text form p button {
@@ -610,6 +621,7 @@ body {
   background: var(--color-3);
   padding: 4px;
   border-radius: 3px;
+  border-radius: 4px;
 }
 
 #right_text form p button:hover {
