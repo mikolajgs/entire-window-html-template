@@ -42,292 +42,416 @@
   }
 </script>
 </head>
-<body onload="add_table_trs(); add_photo_tns(); add_layers();">
+<body>
   <div id="layout">
     <div id="left_icons">
-      <div class="top">
-        <div class="header">Tools</div>
-        <div class="icon">select</div>
-        <div class="icon">move</div>
-        <div class="icon">delete</div>
-        <div class="icon">modify</div>
-        <div class="icon">zoom</div>
-        <div class="icon">pencil</div>
-        <div class="icon">line</div>
-        <div class="icon">shape</div>
-        <div class="icon">fill</div>
-        <div class="icon">eraser</div>
-        <div class="icon">color picker</div>
-        <div class="icon">magic wand</div>
-        <div class="header">Colors</div>
-        <div class="icon" style="background-color: #ff204e;">&nbsp;</div>
-        <div class="icon" style="background-color: #5d0e41;">&nbsp;</div>
-        <div class="header">Pallette</div>
-        <div class="icon" style="background-color: #b4d6cd;"></div>
-        <div class="icon" style="background-color: #ffda76;"></div>
-        <div class="icon" style="background-color: #ff8c9e;"></div>
-        <div class="icon" style="background-color: #ff4e88;"></div>
-        <div class="icon" style="background-color: #a02334;"></div>
-        <div class="icon" style="background-color: #ffad60;"></div>
-        <div class="icon" style="background-color: #ffeead;"></div>
-        <div class="icon" style="background-color: #96ceb6;"></div>
-      </div>
-      <div class="bottom">
-      </div>
     </div>
     <div id="left_text">
-      <div class="header">Structs</div>
-      <div class="info">
-        Click on the struct name to see items.
-      </div>
-      <ul style="padding-top:0">
-        <li><a>User</a></li>
-        <li><a>UserGroup</a></li>
-        <li><a>Product</a></li>
-        <li><a>ProductGroup</a></li>
-        <li><a>Article</a></li>
-        <li><a>Review</a></li>
-      </ul>
-      <div class="header">Views</div>
-      <div class="info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-      <div class="header">Galleries</div>
-      <div class="info">
-        Click on the gallery name so see its contents.
-      </div>
-      <ul style="padding-top:0">
-        <li><a>2024-02-11 Venice</a></li>
-        <li><a>2024-03-00 Various</a></li>
-        <li><a>2024-02-16 Ostrava</a></li>
+      <h3>Structs</h3>
+      <h5>Click on the struct name to manage its contents</h5>
+      <ul>
+        <li><a href="">Items</a></li>
+        <li><a href="">ItemGroups</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Users</a></li>
       </ul>
     </div>
     <div id="center_text">
-      <div class="header">UserGroup struct items</div>
-      <div class="paging">
-        <div class="pages">Page: <button>1</button> <button>2</button> ... <button>50</button> <button class="selected">51</button> <button>52</button> ... <button>134</button> <button>135</button></div>
-        <div class="items">Items per page: <select><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <input type="hidden" id="struct_items_raw_filter_onload" value="">
+      <input type="hidden" id="struct_items_page_onload" value="1">
+      <input type="hidden" id="struct_items_limit_onload" value="25">
+      <input type="hidden" id="struct_items_order_onload" value="ID">
+      <input type="hidden" id="struct_items_order_direction_onload" value="asc">
+      
+      <input type="hidden" id="struct_items_filteronload_ID" value="">
+      
+      <input type="hidden" id="struct_items_filteronload_Flags" value="">
+      
+      <input type="hidden" id="struct_items_filteronload_Name" value="">
+      
+      <input type="hidden" id="struct_items_filteronload_Description" value="">
+      
+      
+      <h3>ItemGroup items</h3>
+      
+      <div>
+        <div><button hx-get="/ui/v1/x/struct_item/ItemGroup/" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">Add item</button></div>
       </div>
-      <div class="filter">
-        <div class="label">Advanced filter:</div>
-        <div class="input"><input type="text"/></div>
-        <div><button>Clear</button> <button>Filter</button></div>
+      
+      
+      
+      <div>
+        <div><b>73</b>&nbsp;items found</div>
       </div>
-      <div class="selection">
-        <div class="left">Selection: <button>Select all</button> <button>Select none</button> <button>Invert selection</button></div>
-        <div class="right">Selected: <button>Delete</button></div>
+      <div>
+        <div>Page:  <button class="selected" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value, order:document.getElementById('struct_items_order_onload').value, orderDirection:document.getElementById('struct_items_order_direction_onload').value }">1</button>  <button hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:2, limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value, order:document.getElementById('struct_items_order_onload').value, orderDirection:document.getElementById('struct_items_order_direction_onload').value }">2</button>  <button hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:3, limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value, order:document.getElementById('struct_items_order_onload').value, orderDirection:document.getElementById('struct_items_order_direction_onload').value }">3</button> </div>
+        <div class="txt_r">Items per page: <select id="struct_items_limit" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="change" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, limit:document.getElementById('struct_items_limit').options[document.getElementById('struct_items_limit').selectedIndex].value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value, order:document.getElementById('struct_items_order_onload').value, orderDirection:document.getElementById('struct_items_order_direction_onload').value }">
+          <option value="10">10</option>
+          <option value="25" selected="">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select></div>
       </div>
-      <div class="table">
+      
+      <div>
+        <div>Selection: 
+          <button onclick="tickAllStructItems('ItemGroup');">Select all</button>
+          <button onclick="untickAllStructItems('ItemGroup');">Select none</button>
+          <button onclick="invertAllStructItems('ItemGroup');">Invert selection</button>
+        </div>
+        <div class="txt_r">Selected: 
+          <button hx-on-htmx-after-request="removeTickedStructItemTableRows('ItemGroup');" hx-delete="/ui/v1/x/struct_items/ItemGroup/" hx-vals="js:{ ids: getTickedStructItems('ItemGroup') }" hx-trigger="click" hx-swap="none">Delete</button>
+        </div>
+      </div>
+      
+      
+      <div>
         <table>
           <thead>
-            <th></th>
-            <th>ID</th>
+            <tr><th></th>
+      
+            
             <th>
-              <div>Name</div>
-              <div class="filter">
-                <div class="input"><input type="text"/></div>
-                <div class="icon">&#10005;</div>
+              <div class="selected">ID <a class=" selected" alt="Sort ascending" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, order:'ID', orderDirection:'asc', limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value }">&nbsp;&#8595;&nbsp;</a> <a class="" alt="Sort descending" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, order:'ID', orderDirection:'desc', limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value }">&nbsp;&#8593;&nbsp;</a></div>
+              <div class="fl">
+                <div><input type="text" id="struct_items_filter_ID" value=""></div>
+                <div><a alt="Clear filter" onclick="document.getElementById('struct_items_filter_ID').value='';">✕</a></div>
               </div>
             </th>
+            
             <th>
-              <div>Code</div>
-              <div class="filter">
-                <div class="input"><input type="text"/></div>
-                <div class="icon">&#10005;</div>
+              <div>Flags <a class="" alt="Sort ascending" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, order:'Flags', orderDirection:'asc', limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value }">&nbsp;&#8595;&nbsp;</a> <a class="" alt="Sort descending" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, order:'Flags', orderDirection:'desc', limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value }">&nbsp;&#8593;&nbsp;</a></div>
+              <div class="fl">
+                <div><input type="text" id="struct_items_filter_Flags" value=""></div>
+                <div><a alt="Clear filter" onclick="document.getElementById('struct_items_filter_Flags').value='';">✕</a></div>
               </div>
             </th>
+            
             <th>
-              <div>Group</div>
-              <div class="filter">
-                <div class="input"><input type="text"/></div>
-                <div class="icon">&#10005;</div>
+              <div>Name <a class="" alt="Sort ascending" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, order:'Name', orderDirection:'asc', limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value }">&nbsp;&#8595;&nbsp;</a> <a class="" alt="Sort descending" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, order:'Name', orderDirection:'desc', limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value }">&nbsp;&#8593;&nbsp;</a></div>
+              <div class="fl">
+                <div><input type="text" id="struct_items_filter_Name" value=""></div>
+                <div><a alt="Clear filter" onclick="document.getElementById('struct_items_filter_Name').value='';">✕</a></div>
               </div>
             </th>
+            
             <th>
-              <div>Price</div>
-              <div class="filter">
-                <div class="input"><input type="text"/></div>
-                <div class="icon">&#10005;</div>
+              <div>Description <a class="" alt="Sort ascending" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, order:'Description', orderDirection:'asc', limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value }">&nbsp;&#8595;&nbsp;</a> <a class="" alt="Sort descending" hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, order:'Description', orderDirection:'desc', limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filteronload_ID').value, filterFlags:document.getElementById('struct_items_filteronload_Flags').value, filterName:document.getElementById('struct_items_filteronload_Name').value, filterDescription:document.getElementById('struct_items_filteronload_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value }">&nbsp;&#8593;&nbsp;</a></div>
+              <div class="fl">
+                <div><input type="text" id="struct_items_filter_Description" value=""></div>
+                <div><a alt="Clear filter" onclick="document.getElementById('struct_items_filter_Description').value='';">✕</a></div>
               </div>
             </th>
-            <th>
-              <div>Created</div>
-              <div class="filter">
-                <div class="input"><input type="text"/></div>
-                <div class="icon">&#10005;</div>
-              </div>
-            </th>
-            <th>
-              <div>Created By</div>
-              <div class="filter">
-                <div class="input"><input type="text"/></div>
-                <div class="icon">&#10005;</div>
-              </div>
-            </th>
-            <th>
-              <div>Active</div>
-              <div class="filter">
-                <div class="input"><input type="text"/></div>
-                <div class="icon">&#10005;</div>
-              </div>
-            </th>
+            
+      
             <th>
               <div>Actions</div>
-              <div class="filter">
-                <button>Filter</button>
+              <div>
+                <button hx-get="/ui/v1/x/struct_items/ItemGroup/" hx-trigger="click" hx-target="#center_text" hx-swap="innerHTML" hx-vals="js:{ page:1, limit:document.getElementById('struct_items_limit_onload').value, filterID:document.getElementById('struct_items_filter_ID').value, filterFlags:document.getElementById('struct_items_filter_Flags').value, filterName:document.getElementById('struct_items_filter_Name').value, filterDescription:document.getElementById('struct_items_filter_Description').value, rawFilter:document.getElementById('struct_items_raw_filter_onload').value, order:document.getElementById('struct_items_order_onload').value, orderDirection:document.getElementById('struct_items_order_direction_onload').value }">Filter</button>
               </div>
             </th>
-          </thead>
+          </tr></thead>
           <tbody>
-            <tr id="copyme">
-              <td><input type="checkbox"/></td>
-              <td>%id</td>
-              <td>Bottle of milk</td>
-              <td>MLK1LA</td>
-              <td>Dairy</td>
-              <td>1,35</td>
-              <td>2022-03-14 13:33:40</td>
-              <td>Jane Doe</td>
-              <td>true</td>
-              <td style="text-align: center">
-                <a>&#9998;</a>
-                <a>&#10005;</a>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="1">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="1"></td>
+              <td>1</td><td>0</td><td>Name 0</td><td>Description 0</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/1" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/1" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
               </td>
             </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="2">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="2"></td>
+              <td>2</td><td>1</td><td>Name 1</td><td>Description 1</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/2" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/2" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="3">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="3"></td>
+              <td>3</td><td>2</td><td>Name 2</td><td>Description 2</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/3" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/3" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="4">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="4"></td>
+              <td>4</td><td>3</td><td>Name 3</td><td>Description 3</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/4" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/4" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="5">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="5"></td>
+              <td>5</td><td>4</td><td>Name 4</td><td>Description 4</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/5" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/5" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="6">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="6"></td>
+              <td>6</td><td>5</td><td>Name 5</td><td>Description 5</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/6" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/6" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="7">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="7"></td>
+              <td>7</td><td>6</td><td>Name 6</td><td>Description 6</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/7" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/7" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="8">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="8"></td>
+              <td>8</td><td>7</td><td>Name 7</td><td>Description 7</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/8" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/8" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="9">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="9"></td>
+              <td>9</td><td>8</td><td>Name 8</td><td>Description 8</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/9" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/9" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="10">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="10"></td>
+              <td>10</td><td>9</td><td>Name 9</td><td>Description 9</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/10" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/10" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="11">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="11"></td>
+              <td>11</td><td>10</td><td>Name 10</td><td>Description 10</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/11" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/11" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="12">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="12"></td>
+              <td>12</td><td>11</td><td>Name 11</td><td>Description 11</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/12" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/12" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="13">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="13"></td>
+              <td>13</td><td>12</td><td>Name 12</td><td>Description 12</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/13" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/13" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="14">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="14"></td>
+              <td>14</td><td>13</td><td>Name 13</td><td>Description 13</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/14" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/14" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="15">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="15"></td>
+              <td>15</td><td>14</td><td>Name 14</td><td>Description 14</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/15" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/15" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="16">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="16"></td>
+              <td>16</td><td>15</td><td>Name 15</td><td>Description 15</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/16" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/16" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="17">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="17"></td>
+              <td>17</td><td>16</td><td>Name 16</td><td>Description 16</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/17" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/17" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="18">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="18"></td>
+              <td>18</td><td>17</td><td>Name 17</td><td>Description 17</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/18" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/18" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="19">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="19"></td>
+              <td>19</td><td>18</td><td>Name 18</td><td>Description 18</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/19" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/19" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="20">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="20"></td>
+              <td>20</td><td>19</td><td>Name 19</td><td>Description 19</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/20" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/20" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="21">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="21"></td>
+              <td>21</td><td>20</td><td>Name 20</td><td>Description 20</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/21" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/21" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="22">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="22"></td>
+              <td>22</td><td>21</td><td>Name 21</td><td>Description 21</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/22" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/22" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="23">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="23"></td>
+              <td>23</td><td>22</td><td>Name 22</td><td>Description 22</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/23" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/23" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="24">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="24"></td>
+              <td>24</td><td>23</td><td>Name 23</td><td>Description 23</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/24" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/24" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
+            
+            <tr struct-item-row="ItemGroup" struct-item-id="25">
+              <td><input type="checkbox" struct-item-checkbox="ItemGroup" struct-item-id="25"></td>
+              <td>25</td><td>24</td><td>Name 24</td><td>Description 24</td>
+              <td>
+                <a hx-get="/ui/v1/x/struct_item/ItemGroup/25" hx-trigger="click" hx-target="#right_text" hx-swap="innerHTML">✎</a>
+                <a hx-delete="/ui/v1/x/struct_item/ItemGroup/25" hx-trigger="click" hx-target="closest tr" hx-swap="delete">✕</a>
+              </td>
+            </tr>
+            
           </tbody>
         </table>
       </div>
-      <div class="paging">
-        <div class="pages">Page: <button>1</button> <button>2</button> ... <button>50</button> <button class="selected">51</button> <button>52</button> ... <button>134</button> <button>135</button></div>
-        <div class="items">Items per page: <select><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div>
-      </div>
-      <div class="thumbnails">
-        <div class="tn" id="copyme2">
-          <div class="tn_icons_left">
-            <input type="checkbox"/>
-          </div>
-          <div class="tn_icons_right">
-            <a>&#9998;</a>
-            <a>&#10005;</a>
-          </div>
-          <div class="tn_name">
-            filename.jpg
-          </div>
-          <img src="img/sample.jpg"/>
-        </div>
-      </div>
+      
     </div>
     <div id="right_text">
-      <div class="header">Image properties</div>
-      <div class="info">
-        Click on the struct name to see items.
-      </div>
-      <div class="header">Layers</div>
-      <div class="layers">
-        <div id="copyme3">
-          <input type="checkbox"/>
-          P
-          <input type="text" value="Layer %id"/>
-          <button>L</button>
-          <button>V</button>
-          <button>U</button>
-          <button>D</button>
-          <button>X</button>
-        </div>
-        <div class="selected">
-          <input type="checkbox"/>
-          P
-          <input type="text" value="My layer"/>
-          <button class="selected">L</button>
-          <button>V</button>
-          <button>U</button>
-          <button>D</button>
-          <button>X</button>
-        </div>
-      </div>
-      <div class="layers">
-        <div class="actions">
-          <input type="checkbox"/>
-          <button>Toggle lock</button>
-          <button>Toggle visibility</button>
-          <button>Delete</button>
-        </div>
-        <div class="actions">
-          <button>&#43; Add layer</button>
-        </div>
-      </div>
-
-
-        <form style="margin-bottom: 100px;">
-        <p>
-          <label>Label bool:</label>
-          <input type="checkbox"/>
-        </p>
-        <p>
-          <label>Label text:</label>
-          <input type="text"/>
-        </p>
-        <p>
-          <label>Label select:</label>
-          <select><option value="a">option 1</option></select>
-        </p>
-        <p>
-          <label>Textarea:</label>
-          <textarea>Lorem ipsum</textarea>
-        </p>
-        <p>
-          <label>Label radios:</label>
-          <input type="radio"/> Radio 1 <input type="radio"/> Radio 2 <input type="radio"/> Radio 3
-        </p>
-        <p>
-          <label></label>
-          <button>Add</button>
-          <button>Reset</button>
-        </p>
-        </form>
-
     </div>
     <div id="right_icons">
-    </div>
-  </div>
-
-
-  <div id="bottom">
-    <div class="text">
-      <div class="left">Text on the left</div>
-      <div class="center">Text in the middle</div>
-      <div class="right">Text on the right</div>
-      <div class="status">Status box</div>
-    </div>
-  </div>
-  <div id="bottom_message">
-    <div class="text">
-      <div class="left">Warning!</div>
-      <div class="right">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
-        <a href="https://forthcoming.systems">more</a>
-      </div>
     </div>
   </div>
 
   <div id="top_menu">
     <div class="dropdown">
       <button>File</button><div class="dropdown_content">
-        <a href="#">New</a>
-        <a href="#">Save</a>
-        <a href="#">Link 3</a>
+        <button>New</button>
+        <button>Save</button>
+        <button>Link 3</button>
       </div>
     </div><div class="dropdown">
       <button>Edit</button><div class="dropdown_content">
-        <a href="#">Resize</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <button>Resize</button>
+        <button>Link 2</button>
+        <button>Link 3</button>
       </div>
     </div><div class="dropdown">
       <button>About</button><div class="dropdown_content">
-        <a href="#">Authors</a>
-        <a href="#">Source code</a>
-        <a href="#">Link 3</a>
+        <button>Authors</button>
+        <button>Source code</button>
+        <button>Link 3</button>
       </div>
     </div>
   </div>
