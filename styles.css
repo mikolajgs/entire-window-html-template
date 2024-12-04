@@ -161,7 +161,8 @@ form label {
   margin-bottom: 5px;
 }
 
-form input[type=text] {
+form input[type=text],
+form input[type=password] {
   border-radius: 4px;
   background: var(--color-1);
   border: solid 1px var(--color-6);
